@@ -10,19 +10,19 @@ import androidx.recyclerview.widget.DiffUtil
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.sim.R
-import com.example.sim.models.resource.Resource
+import com.example.sim.api.resource.responses.ResourceResponse
 import kotlinx.android.synthetic.main.item_resource.view.*
 
 class ResourceAdapter(private val interaction: Interaction? = null) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Resource>() {
+    private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<ResourceResponse>() {
 
-        override fun areItemsTheSame(oldItem: Resource, newItem: Resource): Boolean {
+        override fun areItemsTheSame(oldItem: ResourceResponse, newItem: ResourceResponse): Boolean {
             return oldItem.name == newItem.name
         }
 
-        override fun areContentsTheSame(oldItem: Resource, newItem: Resource): Boolean {
+        override fun areContentsTheSame(oldItem: ResourceResponse, newItem: ResourceResponse): Boolean {
             return oldItem == newItem
         }
 
@@ -54,7 +54,7 @@ class ResourceAdapter(private val interaction: Interaction? = null) :
         return differ.currentList.size
     }
 
-    fun submitList(list: List<Resource>) {
+    fun submitList(list: List<ResourceResponse>) {
         differ.submitList(list)
     }
 
@@ -65,7 +65,7 @@ class ResourceAdapter(private val interaction: Interaction? = null) :
     ) : RecyclerView.ViewHolder(itemView) {
         private val TAG = "ResourceAdapter"
 
-        fun bind(item: Resource) = with(itemView) {
+        fun bind(item: ResourceResponse) = with(itemView) {
             itemView.setOnClickListener {
                 interaction?.onItemSelected(adapterPosition, item)
             }
@@ -81,6 +81,6 @@ class ResourceAdapter(private val interaction: Interaction? = null) :
     }
 
     interface Interaction {
-        fun onItemSelected(position: Int, item: Resource)
+        fun onItemSelected(position: Int, item: ResourceResponse)
     }
 }

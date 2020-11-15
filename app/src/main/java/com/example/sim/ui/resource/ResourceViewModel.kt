@@ -1,10 +1,7 @@
 package com.example.sim.ui.resource
 
 import androidx.hilt.lifecycle.ViewModelInject
-import androidx.lifecycle.LiveData
-import com.example.sim.models.building.Building
-import com.example.sim.models.market.Order
-import com.example.sim.models.resource.Resource
+import com.example.sim.api.resource.responses.ResourceResponse
 import com.example.sim.repository.resource.ResourceRepository
 import com.example.sim.ui.BaseViewModel
 import com.example.sim.ui.resource.state.ResourceStateEvent.ResourceSearchEvent
@@ -16,24 +13,8 @@ class ResourceViewModel @ViewModelInject constructor(
     private val resourceRepository: ResourceRepository
 ) : BaseViewModel<ResourceViewState>() {
 
-    fun requestBuildings() {
-        resourceRepository.getBuildings()
-    }
-
-    fun getBuildings() : LiveData<List<Building>>{
-        return resourceRepository.buildings
-    }
-
-    fun requestOrders() {
-        resourceRepository.getOrders()
-    }
-
-    fun getOrders() : LiveData<List<Order>>{
-        return resourceRepository.orders
-    }
-
     override fun handleNewData(data: ResourceViewState) {
-        data.resourceList?.let { resourceList ->
+        data.resourceResponseList?.let { resourceList ->
             setResourceListData(resourceList)
         }
     }
@@ -66,12 +47,12 @@ class ResourceViewModel @ViewModelInject constructor(
         return ResourceViewState()
     }
 
-    private fun setResourceListData(resourceList: List<Resource>) {
+    private fun setResourceListData(resourceResponseList: List<ResourceResponse>) {
         val update = getCurrentViewStateOrNew()
-        if (update.resourceList == resourceList){
+        if (update.resourceResponseList == resourceResponseList){
             return
         }
-        update.resourceList = resourceList
+        update.resourceResponseList = resourceResponseList
         setViewState(update)
     }
 

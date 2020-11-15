@@ -1,7 +1,7 @@
 package com.example.sim.ui.resource.state
 
-import com.example.sim.models.resource.Resource
+import com.example.sim.api.resource.responses.ResourceResponse
 
 data class ResourceViewState(
-    var resourceList: List<Resource>? = null
+    var resourceResponseList: List<ResourceResponse>? = null
 )

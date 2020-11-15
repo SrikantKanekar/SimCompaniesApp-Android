@@ -1,8 +1,8 @@
 package com.example.sim.models.building
 
-import com.example.sim.models.resource.Resource
+import com.example.sim.api.resource.responses.ResourceResponse
 
 data class Production(
-    val resource: Resource,
+    val resourceResponse: ResourceResponse,
     val anHour: Float
 )

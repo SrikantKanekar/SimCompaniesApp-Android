@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
 import com.example.sim.R
-import com.example.sim.models.resource.Resource
+import com.example.sim.api.resource.responses.ResourceResponse
 import com.example.sim.ui.resource.state.ResourceStateEvent
 import com.example.sim.util.StateMessageCallback
 import dagger.hilt.android.AndroidEntryPoint
@@ -30,7 +30,7 @@ class ResourceFragment : BaseResourceFragment(R.layout.fragment_resources), Reso
 
     private fun subscribeObservers() {
         viewModel.viewState.observe(viewLifecycleOwner, Observer { viewState ->
-            viewState?.resourceList?.let { list ->
+            viewState?.resourceResponseList?.let { list ->
                 adapter.submitList(list)
             }
         })
@@ -53,7 +53,7 @@ class ResourceFragment : BaseResourceFragment(R.layout.fragment_resources), Reso
         })
     }
 
-    override fun onItemSelected(position: Int, item: Resource) {
+    override fun onItemSelected(position: Int, item: ResourceResponse) {
 
     }
 }
