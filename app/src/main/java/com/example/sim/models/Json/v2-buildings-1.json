@@ -1,0 +1,2198 @@
+﻿[
+  {
+    "name": "Plantation",
+    "image": "images/landscape/plantation-lvl1.png",
+    "cost": 6900,
+    "costUnits": 2,
+    "steel": 100,
+    "wages": 103.5,
+    "secondsToBuild": 3600,
+    "category": "production",
+    "kind": "P",
+    "production": [
+      {
+        "resource": {
+          "name": "Seeds",
+          "image": "images/resources/seeds.png",
+          "db_letter": 66,
+          "transportation": 0.1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 889.6291436724266
+      },
+      {
+        "resource": {
+          "name": "Apples",
+          "image": "images/resources/apples.png",
+          "db_letter": 3,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 202.18844174373334
+      },
+      {
+        "resource": {
+          "name": "Oranges",
+          "image": "images/resources/oranges.png",
+          "db_letter": 4,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 186.01336640423466
+      },
+      {
+        "resource": {
+          "name": "Grapes",
+          "image": "images/resources/grapes.png",
+          "db_letter": 5,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 161.75075339498665
+      },
+      {
+        "resource": {
+          "name": "Grain",
+          "image": "images/resources/grain.png",
+          "db_letter": 6,
+          "transportation": 0.1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 808.7537669749333
+      },
+      {
+        "resource": {
+          "name": "Sugarcane",
+          "image": "images/resources/sugarcane.png",
+          "db_letter": 72,
+          "transportation": 0.1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 647.0030135799466
+      },
+      {
+        "resource": {
+          "name": "Cotton",
+          "image": "images/resources/cotton.png",
+          "db_letter": 40,
+          "transportation": 0.5,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 258.80120543197864
+      },
+      {
+        "resource": {
+          "name": "Wood",
+          "image": "images/resources/wood.png",
+          "db_letter": 106,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 76.83160786261867
+      }
+    ]
+  },
+  {
+    "name": "Water reservoir",
+    "image": "images/landscape/reservoir-lvl1.png",
+    "cost": 20700,
+    "costUnits": 6,
+    "steel": 100,
+    "wages": 345,
+    "secondsToBuild": 7200,
+    "category": "production",
+    "kind": "W",
+    "production": [
+      {
+        "resource": {
+          "name": "Water",
+          "image": "images/resources/water.png",
+          "db_letter": 2,
+          "transportation": 0,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 1626.4285714285716
+      }
+    ]
+  },
+  {
+    "name": "Power plant",
+    "image": "images/landscape/powerplant-lvl1.png",
+    "cost": 51750,
+    "costUnits": 15,
+    "steel": 100,
+    "wages": 414,
+    "secondsToBuild": 10800,
+    "category": "production",
+    "kind": "E",
+    "production": [
+      {
+        "resource": {
+          "name": "Power",
+          "image": "images/resources/power.png",
+          "db_letter": 1,
+          "transportation": 0,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 2566.9447221102296
+      }
+    ]
+  },
+  {
+    "name": "Oil rig",
+    "image": "images/landscape/oilrig-lvl1.png",
+    "cost": 69000,
+    "costUnits": 20,
+    "steel": 100,
+    "wages": 517.5,
+    "secondsToBuild": 14400,
+    "category": "production",
+    "kind": "O",
+    "production": [
+      {
+        "resource": {
+          "name": "Crude oil",
+          "image": "images/resources/crude-oil.png",
+          "db_letter": 10,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 41.52052427246143
+      },
+      {
+        "resource": {
+          "name": "Methane",
+          "image": "images/resources/methane.png",
+          "db_letter": 74,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 55.36069902994857
+      }
+    ]
+  },
+  {
+    "name": "Refinery",
+    "image": "images/landscape/refinery-lvl1.png",
+    "cost": 69000,
+    "costUnits": 20,
+    "steel": 100,
+    "wages": 482.99999999999994,
+    "secondsToBuild": 14400,
+    "category": "production",
+    "kind": "R",
+    "production": [
+      {
+        "resource": {
+          "name": "Petrol",
+          "image": "images/resources/petrol.png",
+          "db_letter": 11,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 111.41168223330178
+      },
+      {
+        "resource": {
+          "name": "Diesel",
+          "image": "images/resources/diesel.png",
+          "db_letter": 12,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 115.12540497441184
+      },
+      {
+        "resource": {
+          "name": "Plastic",
+          "image": "images/resources/plastic.png",
+          "db_letter": 19,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 204.25475076105326
+      },
+      {
+        "resource": {
+          "name": "Carbon fibers",
+          "image": "images/resources/carbon-fiber.png",
+          "db_letter": 75,
+          "transportation": 0.1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 245.10570091326392
+      },
+      {
+        "resource": {
+          "name": "Rocket fuel",
+          "image": "images/resources/rocket-fuel.png",
+          "db_letter": 83,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 77.98817756331124
+      }
+    ]
+  },
+  {
+    "name": "Shipping depot",
+    "image": "images/landscape/shipping-lvl1.png",
+    "cost": 51750,
+    "costUnits": 15,
+    "steel": 100,
+    "wages": 310.5,
+    "secondsToBuild": 10800,
+    "category": "production",
+    "kind": "S",
+    "production": [
+      {
+        "resource": {
+          "name": "Transport",
+          "image": "images/resources/transport.png",
+          "db_letter": 13,
+          "transportation": 0,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 3173.9508697581
+      }
+    ]
+  },
+  {
+    "name": "Grocery Store",
+    "image": "images/landscape/grocery2-lvl1.png",
+    "cost": 10350,
+    "costUnits": 3,
+    "steel": 100,
+    "wages": 138,
+    "secondsToBuild": 3600,
+    "category": "sales",
+    "kind": "G",
+    "retail": [
+      {
+        "resource": {
+          "name": "Apples",
+          "image": "images/resources/apples.png",
+          "db_letter": 3,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 4.179307693062217,
+        "saturation": 0.6407158176055606,
+        "retailModeling": "(Math.pow(price*2.995075 + (-7.061656 + (saturation - 0.5)/0.455885), 2.000000)*0.748513 + 20.189612)*amount"
+      },
+      {
+        "resource": {
+          "name": "Oranges",
+          "image": "images/resources/oranges.png",
+          "db_letter": 4,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 4.534276582339754,
+        "saturation": 0.5967859333793165,
+        "retailModeling": "(Math.pow(price*5.236556 + (-12.883340 + (saturation - 0.5)/0.216229), 2.000000)*0.191699 + 24.799298)*amount"
+      },
+      {
+        "resource": {
+          "name": "Grapes",
+          "image": "images/resources/grapes.png",
+          "db_letter": 5,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 5.414372875789613,
+        "saturation": 0.6627532300109502,
+        "retailModeling": "(Math.pow(price*5.811794 + (-17.550478 + (saturation - 0.5)/0.183729), 2.000000)*0.144223 + 27.629893)*amount"
+      },
+      {
+        "resource": {
+          "name": "Steak",
+          "image": "images/resources/steak.png",
+          "db_letter": 7,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 19.479482906053715,
+        "saturation": 1.0789933486135461,
+        "retailModeling": "(Math.pow(price*0.182243 + (-2.422384 + (saturation - 0.5)/2.050372), 2.000000)*48.724567 + 65.291091)*amount"
+      },
+      {
+        "resource": {
+          "name": "Eggs",
+          "image": "images/resources/eggs.png",
+          "db_letter": 9,
+          "transportation": 0.1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 1.7890522321978892,
+        "saturation": 0.2720307091455997,
+        "retailModeling": "(Math.pow(price*5.128403 + (-5.974585 + (saturation - 0.5)/0.862915), 2.000000)*0.772698 + 6.674475)*amount"
+      },
+      {
+        "resource": {
+          "name": "Sausages",
+          "image": "images/resources/sausages.png",
+          "db_letter": 8,
+          "transportation": 0.1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 5.929952152011339,
+        "saturation": 0.5049982676020555,
+        "retailModeling": "(Math.pow(price*4.106472 + (-16.234460 + (saturation - 0.5)/0.355552), 2.000000)*0.363354 + 20.481459)*amount"
+      }
+    ]
+  },
+  {
+    "name": "Electronics Store",
+    "image": "images/landscape/estore-lvl1.png",
+    "cost": 17250,
+    "costUnits": 5,
+    "steel": 100,
+    "wages": 172.5,
+    "secondsToBuild": 3600,
+    "category": "sales",
+    "kind": "C",
+    "retail": [
+      {
+        "resource": {
+          "name": "Smart phones",
+          "image": "images/resources/smart-phones.png",
+          "db_letter": 24,
+          "transportation": 2,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 786.4707347890758,
+        "saturation": 0.6830119878291223,
+        "retailModeling": "(Math.pow(price*1.067335 + (-688.293804 + (saturation - 0.5)/0.013942), 2.000000)*0.055175 + 1139.233564)*amount"
+      },
+      {
+        "resource": {
+          "name": "Tablets",
+          "image": "images/resources/tablets.png",
+          "db_letter": 25,
+          "transportation": 2,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 1245.3563515401825,
+        "saturation": 0.6486586217095789,
+        "retailModeling": "(Math.pow(price*0.548092 + (-449.003038 + (saturation - 0.5)/0.011182), 2.000000)*0.082295 + 2828.716348)*amount"
+      },
+      {
+        "resource": {
+          "name": "Laptops",
+          "image": "images/resources/laptops.png",
+          "db_letter": 26,
+          "transportation": 2,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 1516.3542460000049,
+        "saturation": 0.624519123880756,
+        "retailModeling": "(Math.pow(price*1.699452 + (-2093.645552 + (saturation - 0.5)/0.004871), 2.000000)*0.010992 + 1954.933848)*amount"
+      },
+      {
+        "resource": {
+          "name": "Monitors",
+          "image": "images/resources/monitors.png",
+          "db_letter": 27,
+          "transportation": 2,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 704.7998909245205,
+        "saturation": 0.3332712683254928,
+        "retailModeling": "(Math.pow(price*0.070214 + (-38.459328 + (saturation - 0.5)/0.212900), 2.000000)*12.510591 + 1139.169396)*amount"
+      },
+      {
+        "resource": {
+          "name": "Televisions",
+          "image": "images/resources/televisions.png",
+          "db_letter": 28,
+          "transportation": 2,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 1099.495335318857,
+        "saturation": 0.401953665007926,
+        "retailModeling": "(Math.pow(price*0.708221 + (-658.193804 + (saturation - 0.5)/0.018829), 2.000000)*0.109842 + 1275.456767)*amount"
+      },
+      {
+        "resource": {
+          "name": "Quadcopter",
+          "image": "images/resources/quadcopter.png",
+          "db_letter": 98,
+          "transportation": 2,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 1197.6940671361092,
+        "saturation": 0.49222729520139935,
+        "retailModeling": "(Math.pow(price*0.630065 + (-585.200701 + (saturation - 0.5)/0.012714), 2.000000)*0.081533 + 2291.183118)*amount"
+      }
+    ]
+  },
+  {
+    "name": "Gas station",
+    "image": "images/landscape/gasstation-lvl1.png",
+    "cost": 24150,
+    "costUnits": 7,
+    "steel": 100,
+    "wages": 345,
+    "secondsToBuild": 7200,
+    "category": "sales",
+    "kind": "A",
+    "retail": [
+      {
+        "resource": {
+          "name": "Petrol",
+          "image": "images/resources/petrol.png",
+          "db_letter": 11,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 45.77981486252327,
+        "saturation": 0.5162556400611855,
+        "retailModeling": "(Math.pow(price*2.629946 + (-107.859842 + (saturation - 0.5)/0.214227), 2.000000)*0.140876 + 21.806339)*amount"
+      },
+      {
+        "resource": {
+          "name": "Diesel",
+          "image": "images/resources/diesel.png",
+          "db_letter": 12,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 44.999223782824814,
+        "saturation": 0.5038417514633879,
+        "retailModeling": "(Math.pow(price*2.748311 + (-111.804599 + (saturation - 0.5)/0.203185), 2.000000)*0.126156 + 21.401559)*amount"
+      }
+    ]
+  },
+  {
+    "name": "Farm",
+    "image": "images/landscape/farm-lvl1.png",
+    "cost": 10350,
+    "costUnits": 3,
+    "steel": 100,
+    "wages": 138,
+    "secondsToBuild": 7200,
+    "category": "production",
+    "kind": "F",
+    "production": [
+      {
+        "resource": {
+          "name": "Steak",
+          "image": "images/resources/steak.png",
+          "db_letter": 7,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 45.210537717861584
+      },
+      {
+        "resource": {
+          "name": "Sausages",
+          "image": "images/resources/sausages.png",
+          "db_letter": 8,
+          "transportation": 0.1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 135.63161315358477
+      },
+      {
+        "resource": {
+          "name": "Eggs",
+          "image": "images/resources/eggs.png",
+          "db_letter": 9,
+          "transportation": 0.1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 316.47376402503113
+      },
+      {
+        "resource": {
+          "name": "Leather",
+          "image": "images/resources/leather.png",
+          "db_letter": 46,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 30.14035847857439
+      }
+    ]
+  },
+  {
+    "name": "Beverage factory",
+    "image": "images/landscape/beverage-factory-lvl1.png",
+    "cost": 13800,
+    "costUnits": 4,
+    "steel": 100,
+    "wages": 241.49999999999997,
+    "secondsToBuild": 7200,
+    "category": "production",
+    "kind": "6",
+    "production": [
+      {
+        "resource": {
+          "name": "Ethanol",
+          "image": "images/resources/ethanol.png",
+          "db_letter": 73,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 60.94032114380477
+      }
+    ]
+  },
+  {
+    "name": "Mine",
+    "image": "images/landscape/mine-lvl1.png",
+    "cost": 24150,
+    "costUnits": 7,
+    "steel": 100,
+    "wages": 276,
+    "secondsToBuild": 14400,
+    "category": "production",
+    "kind": "M",
+    "production": [
+      {
+        "resource": {
+          "name": "Minerals",
+          "image": "images/resources/minerals.png",
+          "db_letter": 14,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 119.23290870972747
+      },
+      {
+        "resource": {
+          "name": "Bauxite",
+          "image": "images/resources/bauxite.png",
+          "db_letter": 15,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 96.5218784793032
+      },
+      {
+        "resource": {
+          "name": "Gold ore",
+          "image": "images/resources/gold-ore.png",
+          "db_letter": 68,
+          "transportation": 10,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 56.7775755760607
+      },
+      {
+        "resource": {
+          "name": "Iron ore",
+          "image": "images/resources/iron-ore.png",
+          "db_letter": 42,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 181.68824184339425
+      }
+    ]
+  },
+  {
+    "name": "Factory",
+    "image": "images/landscape/factory-lvl1.png",
+    "cost": 48300,
+    "costUnits": 14,
+    "steel": 100,
+    "wages": 414,
+    "secondsToBuild": 10800,
+    "category": "production",
+    "kind": "Y",
+    "production": [
+      {
+        "resource": {
+          "name": "Silicon",
+          "image": "images/resources/silicon.png",
+          "db_letter": 16,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 154.01668332661376
+      },
+      {
+        "resource": {
+          "name": "Chemicals",
+          "image": "images/resources/chemicals.png",
+          "db_letter": 17,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 213.91206017585245
+      },
+      {
+        "resource": {
+          "name": "Aluminium",
+          "image": "images/resources/aluminium.png",
+          "db_letter": 18,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 119.79075369847737
+      },
+      {
+        "resource": {
+          "name": "Golden bars",
+          "image": "images/resources/golden-bars.png",
+          "db_letter": 69,
+          "transportation": 1000,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 29.947688424619344
+      },
+      {
+        "resource": {
+          "name": "Steel",
+          "image": "images/resources/steel.png",
+          "db_letter": 43,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 192.5208541582672
+      },
+      {
+        "resource": {
+          "name": "Glass",
+          "image": "images/resources/glass.png",
+          "db_letter": 45,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 128.34723610551148
+      },
+      {
+        "resource": {
+          "name": "Carbon composite",
+          "image": "images/resources/carbon-composite.png",
+          "db_letter": 76,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 68.45185925627278
+      }
+    ]
+  },
+  {
+    "name": "Electronics factory",
+    "image": "images/landscape/efactory4-lvl1.png",
+    "cost": 82800,
+    "costUnits": 24,
+    "steel": 100,
+    "wages": 379.50000000000006,
+    "secondsToBuild": 18000,
+    "category": "production",
+    "kind": "L",
+    "production": [
+      {
+        "resource": {
+          "name": "Processors",
+          "image": "images/resources/processors.png",
+          "db_letter": 20,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 9.183815625368613
+      },
+      {
+        "resource": {
+          "name": "Electronic components",
+          "image": "images/resources/electronic-components.png",
+          "db_letter": 21,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 41.32717031415876
+      },
+      {
+        "resource": {
+          "name": "Batteries",
+          "image": "images/resources/batteries.png",
+          "db_letter": 22,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 25.255492969763683
+      },
+      {
+        "resource": {
+          "name": "Displays",
+          "image": "images/resources/displays.png",
+          "db_letter": 23,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 32.14335468879014
+      },
+      {
+        "resource": {
+          "name": "Smart phones",
+          "image": "images/resources/smart-phones.png",
+          "db_letter": 24,
+          "transportation": 2,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 11.479769531710765
+      },
+      {
+        "resource": {
+          "name": "Tablets",
+          "image": "images/resources/tablets.png",
+          "db_letter": 25,
+          "transportation": 2,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 11.479769531710765
+      },
+      {
+        "resource": {
+          "name": "Laptops",
+          "image": "images/resources/laptops.png",
+          "db_letter": 26,
+          "transportation": 2,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 9.183815625368613
+      },
+      {
+        "resource": {
+          "name": "Monitors",
+          "image": "images/resources/monitors.png",
+          "db_letter": 27,
+          "transportation": 2,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 18.367631250737226
+      },
+      {
+        "resource": {
+          "name": "Televisions",
+          "image": "images/resources/televisions.png",
+          "db_letter": 28,
+          "transportation": 2,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 16.07167734439507
+      },
+      {
+        "resource": {
+          "name": "On-board computer",
+          "image": "images/resources/on-board-computer.png",
+          "db_letter": 47,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 13.775723438052918
+      },
+      {
+        "resource": {
+          "name": "High grade e-comps",
+          "image": "images/resources/high-grade-e-components.png",
+          "db_letter": 79,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 1.8367631250737224
+      }
+    ]
+  },
+  {
+    "name": "Fashion factory",
+    "image": "images/landscape/clothsfactory-lvl1.png",
+    "cost": 13800,
+    "costUnits": 4,
+    "steel": 100,
+    "wages": 138,
+    "secondsToBuild": 7200,
+    "category": "production",
+    "kind": "T",
+    "production": [
+      {
+        "resource": {
+          "name": "Fabric",
+          "image": "images/resources/fabric.png",
+          "db_letter": 41,
+          "transportation": 0.5,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 241.12286782859513
+      },
+      {
+        "resource": {
+          "name": "Underwear",
+          "image": "images/resources/underwear.png",
+          "db_letter": 60,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 165.77197163215916
+      },
+      {
+        "resource": {
+          "name": "Gloves",
+          "image": "images/resources/gloves.png",
+          "db_letter": 61,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 143.16670277322837
+      },
+      {
+        "resource": {
+          "name": "Dress",
+          "image": "images/resources/dress.png",
+          "db_letter": 62,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 150.70179239287197
+      },
+      {
+        "resource": {
+          "name": "Stiletto Heel",
+          "image": "images/resources/simmi-shoes.png",
+          "db_letter": 63,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 97.95616505536677
+      },
+      {
+        "resource": {
+          "name": "Handbags",
+          "image": "images/resources/handbags.png",
+          "db_letter": 64,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 67.81580657679238
+      },
+      {
+        "resource": {
+          "name": "Sneakers",
+          "image": "images/resources/sneakers.png",
+          "db_letter": 65,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 173.30706125180276
+      },
+      {
+        "resource": {
+          "name": "Luxury watch",
+          "image": "images/resources/gold-watch.png",
+          "db_letter": 70,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 18.837724049108996
+      },
+      {
+        "resource": {
+          "name": "Necklace",
+          "image": "images/resources/necklace.png",
+          "db_letter": 71,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 41.44299290803979
+      }
+    ]
+  },
+  {
+    "name": "Fashion store",
+    "image": "images/landscape/fashion-lvl1.png",
+    "cost": 17250,
+    "costUnits": 5,
+    "steel": 100,
+    "wages": 310.5,
+    "secondsToBuild": 10800,
+    "category": "sales",
+    "kind": "H",
+    "retail": [
+      {
+        "resource": {
+          "name": "Underwear",
+          "image": "images/resources/underwear.png",
+          "db_letter": 60,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 22.985158315417898,
+        "saturation": 0.38941469174007415,
+        "retailModeling": "(Math.pow(price*2.740636 + (-24.330388 + (saturation - 0.5)/0.081393), 2.000000)*0.054546 + 82.374846)*amount"
+      },
+      {
+        "resource": {
+          "name": "Gloves",
+          "image": "images/resources/gloves.png",
+          "db_letter": 61,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 35.667791464065054,
+        "saturation": 0.3024892854254816,
+        "retailModeling": "(Math.pow(price*2.953775 + (-45.074959 + (saturation - 0.5)/0.052738), 2.000000)*0.032161 + 112.488821)*amount"
+      },
+      {
+        "resource": {
+          "name": "Dress",
+          "image": "images/resources/dress.png",
+          "db_letter": 62,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 27.813961952814264,
+        "saturation": 0.24483084813178174,
+        "retailModeling": "(Math.pow(price*1.553962 + (-30.057010 + (saturation - 0.5)/0.236404), 2.000000)*0.247647 + 49.940964)*amount"
+      },
+      {
+        "resource": {
+          "name": "Stiletto Heel",
+          "image": "images/resources/simmi-shoes.png",
+          "db_letter": 63,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 36.77773694609458,
+        "saturation": 0.2702462955263039,
+        "retailModeling": "(Math.pow(price*3.400336 + (-71.173102 + (saturation - 0.5)/0.068636), 2.000000)*0.030531 + 75.686571)*amount"
+      },
+      {
+        "resource": {
+          "name": "Handbags",
+          "image": "images/resources/handbags.png",
+          "db_letter": 64,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 50.005034277210626,
+        "saturation": 0.42325273212544834,
+        "retailModeling": "(Math.pow(price*2.108695 + (-61.187955 + (saturation - 0.5)/0.073861), 2.000000)*0.059377 + 112.584167)*amount"
+      },
+      {
+        "resource": {
+          "name": "Sneakers",
+          "image": "images/resources/sneakers.png",
+          "db_letter": 65,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 28.893580696870053,
+        "saturation": 0.21250407837710852,
+        "retailModeling": "(Math.pow(price*1.015559 + (-14.939446 + (saturation - 0.5)/0.242390), 2.000000)*0.361012 + 69.774240)*amount"
+      },
+      {
+        "resource": {
+          "name": "Luxury watch",
+          "image": "images/resources/gold-watch.png",
+          "db_letter": 70,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 923.1489412505236,
+        "saturation": 0.5428815301860906,
+        "retailModeling": "(Math.pow(price*0.966873 + (-735.657764 + (saturation - 0.5)/0.021390), 2.000000)*0.032963 + 782.692494)*amount"
+      },
+      {
+        "resource": {
+          "name": "Necklace",
+          "image": "images/resources/necklace.png",
+          "db_letter": 71,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 1764.4202023178204,
+        "saturation": 1.1455661241557145,
+        "retailModeling": "(Math.pow(price*1.459917 + (-2234.725638 + (saturation - 0.5)/0.008805), 2.000000)*0.008422 + 1192.797672)*amount"
+      }
+    ]
+  },
+  {
+    "name": "Car factory",
+    "image": "images/landscape/carfactory-lvl1.png",
+    "cost": 93150,
+    "costUnits": 27,
+    "steel": 100,
+    "wages": 448.5,
+    "secondsToBuild": 21600,
+    "category": "production",
+    "kind": "1",
+    "production": [
+      {
+        "resource": {
+          "name": "Luxury car interior",
+          "image": "images/resources/luxury-car-interior.png",
+          "db_letter": 49,
+          "transportation": 2,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 19.930003543310857
+      },
+      {
+        "resource": {
+          "name": "Basic interior",
+          "image": "images/resources/car-interior.png",
+          "db_letter": 50,
+          "transportation": 2,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 31.88800566929737
+      },
+      {
+        "resource": {
+          "name": "Car body",
+          "image": "images/resources/car-body.png",
+          "db_letter": 51,
+          "transportation": 2,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 23.91600425197303
+      },
+      {
+        "resource": {
+          "name": "Economy e-car",
+          "image": "images/resources/economy-e-car.png",
+          "db_letter": 53,
+          "transportation": 5,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 19.930003543310857
+      },
+      {
+        "resource": {
+          "name": "Luxury e-car",
+          "image": "images/resources/luxury-e-car.png",
+          "db_letter": 54,
+          "transportation": 5,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 3.9860007086621714
+      },
+      {
+        "resource": {
+          "name": "Economy car",
+          "image": "images/resources/economy-car.png",
+          "db_letter": 55,
+          "transportation": 5,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 13.9510024803176
+      },
+      {
+        "resource": {
+          "name": "Luxury car",
+          "image": "images/resources/luxury-car.png",
+          "db_letter": 56,
+          "transportation": 5,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 1.9930003543310857
+      },
+      {
+        "resource": {
+          "name": "Truck",
+          "image": "images/resources/truck.png",
+          "db_letter": 57,
+          "transportation": 5,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 4.783200850394605
+      },
+      {
+        "resource": {
+          "name": "Bulldozer",
+          "image": "images/resources/bulldozer.png",
+          "db_letter": 112,
+          "transportation": 5,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 5.58040099212704
+      }
+    ]
+  },
+  {
+    "name": "Car dealership",
+    "image": "images/landscape/car-dealership-lvl1.png",
+    "cost": 20700,
+    "costUnits": 6,
+    "steel": 100,
+    "wages": 379.50000000000006,
+    "secondsToBuild": 10800,
+    "category": "sales",
+    "kind": "2",
+    "retail": [
+      {
+        "resource": {
+          "name": "Economy e-car",
+          "image": "images/resources/economy-e-car.png",
+          "db_letter": 53,
+          "transportation": 5,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 3733.8513792899657,
+        "saturation": 0.7543965617135503,
+        "retailModeling": "(Math.pow(price*0.248178 + (-833.752402 + (saturation - 0.5)/0.036845), 2.000000)*0.141726 + 1194.051161)*amount"
+      },
+      {
+        "resource": {
+          "name": "Luxury e-car",
+          "image": "images/resources/luxury-e-car.png",
+          "db_letter": 54,
+          "transportation": 5,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 7964.60134115253,
+        "saturation": 0.7916146912524396,
+        "retailModeling": "(Math.pow(price*0.183491 + (-1176.722444 + (saturation - 0.5)/0.014132), 2.000000)*0.082514 + 4725.805302)*amount"
+      },
+      {
+        "resource": {
+          "name": "Economy car",
+          "image": "images/resources/economy-car.png",
+          "db_letter": 55,
+          "transportation": 5,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 2551.404253427306,
+        "saturation": 0.6664505127955628,
+        "retailModeling": "(Math.pow(price*0.238168 + (-550.223268 + (saturation - 0.5)/0.049419), 2.000000)*0.278207 + 1138.815876)*amount"
+      },
+      {
+        "resource": {
+          "name": "Luxury car",
+          "image": "images/resources/luxury-car.png",
+          "db_letter": 56,
+          "transportation": 5,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 5699.281256005306,
+        "saturation": 0.7247693274282753,
+        "retailModeling": "(Math.pow(price*0.143196 + (-640.314337 + (saturation - 0.5)/0.020614), 2.000000)*0.173034 + 4447.992542)*amount"
+      },
+      {
+        "resource": {
+          "name": "Truck",
+          "image": "images/resources/truck.png",
+          "db_letter": 57,
+          "transportation": 5,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 6372.773678359313,
+        "saturation": 0.6865519391563109,
+        "retailModeling": "(Math.pow(price*0.301880 + (-1729.839177 + (saturation - 0.5)/0.017865), 2.000000)*0.068383 + 2352.484600)*amount"
+      }
+    ]
+  },
+  {
+    "name": "Plant research center",
+    "image": "images/landscape/plantresearch.png",
+    "cost": 103500,
+    "costUnits": 30,
+    "steel": 100,
+    "wages": 448.5,
+    "secondsToBuild": 18000,
+    "category": "research",
+    "kind": "p",
+    "production": [
+      {
+        "resource": {
+          "name": "Plant research",
+          "image": "images/resources/plant-research.png",
+          "db_letter": 29,
+          "transportation": 0,
+          "retailable": false,
+          "research": true
+        },
+        "anHour": 4.783200850394605
+      }
+    ]
+  },
+  {
+    "name": "Physics laboratory",
+    "image": "images/landscape/physics-lab-lvl1.png",
+    "cost": 165600,
+    "costUnits": 48,
+    "steel": 100,
+    "wages": 586.5,
+    "secondsToBuild": 25200,
+    "category": "research",
+    "kind": "h",
+    "production": [
+      {
+        "resource": {
+          "name": "Energy research",
+          "image": "images/resources/energy-research.png",
+          "db_letter": 30,
+          "transportation": 0,
+          "retailable": false,
+          "research": true
+        },
+        "anHour": 3.3038359820105594
+      },
+      {
+        "resource": {
+          "name": "Mining research",
+          "image": "images/resources/mining-research.png",
+          "db_letter": 31,
+          "transportation": 0,
+          "retailable": false,
+          "research": true
+        },
+        "anHour": 3.0034872563732358
+      },
+      {
+        "resource": {
+          "name": "Electronics research",
+          "image": "images/resources/electronics-research.png",
+          "db_letter": 32,
+          "transportation": 0,
+          "retailable": false,
+          "research": true
+        },
+        "anHour": 2.4027898050985885
+      }
+    ]
+  },
+  {
+    "name": "Breeding laboratory",
+    "image": "images/landscape/breeding-research-lvl1.png",
+    "cost": 96600,
+    "costUnits": 28,
+    "steel": 100,
+    "wages": 414,
+    "secondsToBuild": 18000,
+    "category": "research",
+    "kind": "b",
+    "production": [
+      {
+        "resource": {
+          "name": "Breeding research",
+          "image": "images/resources/breeding-research.png",
+          "db_letter": 33,
+          "transportation": 0,
+          "retailable": false,
+          "research": true
+        },
+        "anHour": 3.850417083165344
+      }
+    ]
+  },
+  {
+    "name": "Chemistry laboratory",
+    "image": "images/landscape/chemistry-research-lvl1.png",
+    "cost": 96600,
+    "costUnits": 28,
+    "steel": 100,
+    "wages": 414,
+    "secondsToBuild": 18000,
+    "category": "research",
+    "kind": "c",
+    "production": [
+      {
+        "resource": {
+          "name": "Chemistry research",
+          "image": "images/resources/chemistry-research.png",
+          "db_letter": 34,
+          "transportation": 0,
+          "retailable": false,
+          "research": true
+        },
+        "anHour": 4.706065323868754
+      },
+      {
+        "resource": {
+          "name": "Materials research",
+          "image": "images/resources/materials-research.png",
+          "db_letter": 113,
+          "transportation": 0,
+          "retailable": false,
+          "research": true
+        },
+        "anHour": 3.4225929628136393
+      }
+    ]
+  },
+  {
+    "name": "Software R&D",
+    "image": "images/landscape/swresearch.png",
+    "cost": 65550,
+    "costUnits": 19,
+    "steel": 100,
+    "wages": 586.5,
+    "secondsToBuild": 10800,
+    "category": "research",
+    "kind": "s",
+    "production": [
+      {
+        "resource": {
+          "name": "Software",
+          "image": "images/resources/software.png",
+          "db_letter": 35,
+          "transportation": 0,
+          "retailable": false,
+          "research": true
+        },
+        "anHour": 5.7066257871091475
+      }
+    ]
+  },
+  {
+    "name": "Automotive R&D",
+    "image": "images/landscape/race-track-lvl1.png",
+    "cost": 138000,
+    "costUnits": 40,
+    "steel": 100,
+    "wages": 552,
+    "secondsToBuild": 21600,
+    "category": "research",
+    "kind": "a",
+    "production": [
+      {
+        "resource": {
+          "name": "Automotive research",
+          "image": "images/resources/automotive-research.png",
+          "db_letter": 58,
+          "transportation": 0,
+          "retailable": false,
+          "research": true
+        },
+        "anHour": 4.19080101478387
+      }
+    ]
+  },
+  {
+    "name": "Fashion & Design",
+    "image": "images/landscape/fashion-research-lvl1.png",
+    "cost": 72450,
+    "costUnits": 21,
+    "steel": 100,
+    "wages": 448.5,
+    "secondsToBuild": 7200,
+    "category": "research",
+    "kind": "f",
+    "production": [
+      {
+        "resource": {
+          "name": "Fashion research",
+          "image": "images/resources/fashion-research.png",
+          "db_letter": 59,
+          "transportation": 0,
+          "retailable": false,
+          "research": true
+        },
+        "anHour": 6.776201204725691
+      }
+    ]
+  },
+  {
+    "name": "Launch pad",
+    "image": "images/landscape/launchpad-lvl1.png",
+    "cost": 124200,
+    "costUnits": 36,
+    "steel": 100,
+    "wages": 517.5,
+    "secondsToBuild": 32400,
+    "category": "research",
+    "kind": "l",
+    "production": [
+      {
+        "resource": {
+          "name": "Aerospace research",
+          "image": "images/resources/aero-research.png",
+          "db_letter": 100,
+          "transportation": 0,
+          "retailable": false,
+          "research": true
+        },
+        "anHour": 0.34600436893717856
+      }
+    ]
+  },
+  {
+    "name": "Castle",
+    "image": "images/landscape/recreational/castle-lvl1.png",
+    "cost": 138000,
+    "costUnits": 40,
+    "steel": 100,
+    "wages": 0,
+    "secondsToBuild": 43200,
+    "category": "recreation",
+    "kind": "3"
+  },
+  {
+    "name": "Park",
+    "image": "images/landscape/recreational/park-lvl1.png",
+    "cost": 138000,
+    "costUnits": 40,
+    "steel": 100,
+    "wages": 0,
+    "secondsToBuild": 43200,
+    "category": "recreation",
+    "kind": "4"
+  },
+  {
+    "name": "Lake",
+    "image": "images/landscape/recreational/lake-lvl1.png",
+    "cost": 138000,
+    "costUnits": 40,
+    "steel": 100,
+    "wages": 0,
+    "secondsToBuild": 43200,
+    "category": "recreation",
+    "kind": "5"
+  },
+  {
+    "name": "Propulsion factory",
+    "image": "images/landscape/propulsion-2-lvl1.png",
+    "cost": 103500,
+    "costUnits": 30,
+    "steel": 100,
+    "wages": 621,
+    "secondsToBuild": 25200,
+    "category": "production",
+    "kind": "D",
+    "production": [
+      {
+        "resource": {
+          "name": "Electric motor",
+          "image": "images/resources/electric-motor.png",
+          "db_letter": 48,
+          "transportation": 2,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 30.781557044450057
+      },
+      {
+        "resource": {
+          "name": "Combustion engine",
+          "image": "images/resources/combustion-engine.png",
+          "db_letter": 52,
+          "transportation": 2,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 5.596646735354556
+      },
+      {
+        "resource": {
+          "name": "Solid fuel booster",
+          "image": "images/resources/solid-rocket.png",
+          "db_letter": 85,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 0.2798323367677278
+      },
+      {
+        "resource": {
+          "name": "Rocket engine",
+          "image": "images/resources/rocket-engine.png",
+          "db_letter": 86,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 0.2798323367677278
+      },
+      {
+        "resource": {
+          "name": "Ion drive",
+          "image": "images/resources/ion-drive.png",
+          "db_letter": 88,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 0.5596646735354556
+      },
+      {
+        "resource": {
+          "name": "Jet engine",
+          "image": "images/resources/jet-engine.png",
+          "db_letter": 89,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 0.8394970103031834
+      }
+    ]
+  },
+  {
+    "name": "Aerospace factory",
+    "image": "images/landscape/aerospace-2-lvl1.png",
+    "cost": 106950,
+    "costUnits": 31,
+    "steel": 100,
+    "wages": 586.5,
+    "secondsToBuild": 21600,
+    "category": "production",
+    "kind": "7",
+    "production": [
+      {
+        "resource": {
+          "name": "Fuselage",
+          "image": "images/resources/fuselage.png",
+          "db_letter": 77,
+          "transportation": 2,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 3.3038359820105594
+      },
+      {
+        "resource": {
+          "name": "Wing",
+          "image": "images/resources/wing.png",
+          "db_letter": 78,
+          "transportation": 2,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 8.109415592207736
+      },
+      {
+        "resource": {
+          "name": "Propellant tank",
+          "image": "images/resources/fuel-tank.png",
+          "db_letter": 84,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 4.505230884559854
+      },
+      {
+        "resource": {
+          "name": "Heat shield",
+          "image": "images/resources/heat-shield.png",
+          "db_letter": 87,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 12.013949025492943
+      },
+      {
+        "resource": {
+          "name": "Sub-orbital 2nd stage",
+          "image": "images/resources/sub-orbital-second-stage.png",
+          "db_letter": 90,
+          "transportation": 20,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 3.0034872563732358
+      },
+      {
+        "resource": {
+          "name": "Orbital booster",
+          "image": "images/resources/orbital-booster.png",
+          "db_letter": 92,
+          "transportation": 100,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 1.5017436281866179
+      },
+      {
+        "resource": {
+          "name": "Starship",
+          "image": "images/resources/starship.png",
+          "db_letter": 93,
+          "transportation": 100,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 0.30034872563732357
+      }
+    ]
+  },
+  {
+    "name": "Aerospace electronics",
+    "image": "images/landscape/aero-electronics-2-lvl1.png",
+    "cost": 141450,
+    "costUnits": 41,
+    "steel": 100,
+    "wages": 724.5,
+    "secondsToBuild": 21600,
+    "category": "production",
+    "kind": "8",
+    "production": [
+      {
+        "resource": {
+          "name": "Flight computer",
+          "image": "images/resources/flight-computer.png",
+          "db_letter": 80,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 2.2631545648229796
+      },
+      {
+        "resource": {
+          "name": "Cockpit",
+          "image": "images/resources/cockpit.png",
+          "db_letter": 81,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 2.2631545648229796
+      },
+      {
+        "resource": {
+          "name": "Attitude control",
+          "image": "images/resources/attitude-control.png",
+          "db_letter": 82,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 2.715785477787575
+      },
+      {
+        "resource": {
+          "name": "Quadcopter",
+          "image": "images/resources/quadcopter.png",
+          "db_letter": 98,
+          "transportation": 2,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 12.447350106526388
+      },
+      {
+        "resource": {
+          "name": "Satellite",
+          "image": "images/resources/satellite.png",
+          "db_letter": 99,
+          "transportation": 10,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 0.11315772824114897
+      }
+    ]
+  },
+  {
+    "name": "Vertical integration facility",
+    "image": "images/landscape/vertical-integration-lvl1.png",
+    "cost": 113850,
+    "costUnits": 33,
+    "steel": 100,
+    "wages": 759.0000000000001,
+    "secondsToBuild": 10800,
+    "category": "production",
+    "kind": "9",
+    "production": [
+      {
+        "resource": {
+          "name": "Sub-orbital rocket",
+          "image": "images/resources/sub-orbital-rocket2.png",
+          "db_letter": 91,
+          "transportation": 20,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 0.6325685208057351
+      },
+      {
+        "resource": {
+          "name": "BFR",
+          "image": "images/resources/BFR.png",
+          "db_letter": 94,
+          "transportation": 2000,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 0.2108561736019117
+      }
+    ]
+  },
+  {
+    "name": "Hangar",
+    "image": "images/landscape/horizontal-integration-lvl1.png",
+    "cost": 100050,
+    "costUnits": 29,
+    "steel": 100,
+    "wages": 759.0000000000001,
+    "secondsToBuild": 10800,
+    "category": "production",
+    "kind": "0",
+    "production": [
+      {
+        "resource": {
+          "name": "Jumbo jet",
+          "image": "images/resources/jumbojet2.png",
+          "db_letter": 95,
+          "transportation": 2000,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 0.06325685208057351
+      },
+      {
+        "resource": {
+          "name": "Luxury jet",
+          "image": "images/resources/private-jet.png",
+          "db_letter": 96,
+          "transportation": 1000,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 0.16868493888152936
+      },
+      {
+        "resource": {
+          "name": "Single engine plane",
+          "image": "images/resources/single-engine.png",
+          "db_letter": 97,
+          "transportation": 100,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 1.475993215213382
+      }
+    ]
+  },
+  {
+    "name": "Sales offices",
+    "image": "images/landscape/sales-offices-2-lvl1.png",
+    "cost": 62100,
+    "costUnits": 18,
+    "steel": 100,
+    "wages": 586.5,
+    "secondsToBuild": 7200,
+    "category": "sales",
+    "kind": "B",
+    "retail": [
+      {
+        "resource": {
+          "name": "Sub-orbital rocket",
+          "image": "images/resources/sub-orbital-rocket2.png",
+          "db_letter": 91,
+          "transportation": 20,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 130210.68556564565,
+        "saturation": 4.011312228644735,
+        "retailModeling": null
+      },
+      {
+        "resource": {
+          "name": "BFR",
+          "image": "images/resources/BFR.png",
+          "db_letter": 94,
+          "transportation": 2000,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 910094.0280160308,
+        "saturation": 3.953355604894143,
+        "retailModeling": null
+      },
+      {
+        "resource": {
+          "name": "Jumbo jet",
+          "image": "images/resources/jumbojet2.png",
+          "db_letter": 95,
+          "transportation": 2000,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 242044.56993781234,
+        "saturation": 4.21600753521131,
+        "retailModeling": null
+      },
+      {
+        "resource": {
+          "name": "Luxury jet",
+          "image": "images/resources/private-jet.png",
+          "db_letter": 96,
+          "transportation": 1000,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 90692.03161925192,
+        "saturation": 4.159660917399644,
+        "retailModeling": null
+      },
+      {
+        "resource": {
+          "name": "Single engine plane",
+          "image": "images/resources/single-engine.png",
+          "db_letter": 97,
+          "transportation": 100,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 44339.16550447151,
+        "saturation": 4.040100132468057,
+        "retailModeling": null
+      },
+      {
+        "resource": {
+          "name": "Satellite",
+          "image": "images/resources/satellite.png",
+          "db_letter": 99,
+          "transportation": 10,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 65441.45311524238,
+        "saturation": 4.186428038764164,
+        "retailModeling": null
+      }
+    ]
+  },
+  {
+    "name": "Quarry",
+    "image": "images/landscape/quarry-lvl1.png",
+    "cost": 24150,
+    "costUnits": 7,
+    "steel": 100,
+    "wages": 276,
+    "secondsToBuild": 10800,
+    "category": "production",
+    "kind": "Q",
+    "production": [
+      {
+        "resource": {
+          "name": "Sand",
+          "image": "images/resources/sand.png",
+          "db_letter": 44,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 1419.4393894015175
+      },
+      {
+        "resource": {
+          "name": "Clay",
+          "image": "images/resources/clay.png",
+          "db_letter": 104,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 1078.7739359451534
+      },
+      {
+        "resource": {
+          "name": "Limestone",
+          "image": "images/resources/limestone.png",
+          "db_letter": 105,
+          "transportation": 1,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 794.8860580648499
+      }
+    ]
+  },
+  {
+    "name": "Concrete plant",
+    "image": "images/landscape/concrete-plant-lvl1.png",
+    "cost": 58650,
+    "costUnits": 17,
+    "steel": 100,
+    "wages": 379.50000000000006,
+    "secondsToBuild": 18000,
+    "category": "production",
+    "kind": "o",
+    "production": [
+      {
+        "resource": {
+          "name": "Reinforced concrete",
+          "image": "images/resources/reinforced-concrete.png",
+          "db_letter": 101,
+          "transportation": 10,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 188.26822032005654
+      },
+      {
+        "resource": {
+          "name": "Bricks",
+          "image": "images/resources/bricks.png",
+          "db_letter": 102,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 367.3526250147445
+      },
+      {
+        "resource": {
+          "name": "Cement",
+          "image": "images/resources/cement.png",
+          "db_letter": 103,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 298.4740078244799
+      }
+    ]
+  },
+  {
+    "name": "Construction factory",
+    "image": "images/landscape/construction-factory-lvl1.png",
+    "cost": 72450,
+    "costUnits": 21,
+    "steel": 100,
+    "wages": 482.99999999999994,
+    "secondsToBuild": 21600,
+    "category": "production",
+    "kind": "x",
+    "production": [
+      {
+        "resource": {
+          "name": "Steel beams",
+          "image": "images/resources/steel-beams.png",
+          "db_letter": 107,
+          "transportation": 5,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 129.98029593885207
+      },
+      {
+        "resource": {
+          "name": "Planks",
+          "image": "images/resources/planks.png",
+          "db_letter": 108,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 115.12540497441184
+      },
+      {
+        "resource": {
+          "name": "Windows",
+          "image": "images/resources/windows.png",
+          "db_letter": 109,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 16.711752334995268
+      },
+      {
+        "resource": {
+          "name": "Tools",
+          "image": "images/resources/tools.png",
+          "db_letter": 110,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "anHour": 25.996059187770413
+      }
+    ]
+  },
+  {
+    "name": "General contractor",
+    "image": "images/landscape/general-contractor-lvl1.png",
+    "cost": 48300,
+    "costUnits": 14,
+    "steel": 100,
+    "wages": 345,
+    "secondsToBuild": 7200,
+    "category": "production",
+    "kind": "g",
+    "production": [
+      {
+        "resource": {
+          "name": "Construction units",
+          "image": "images/resources/construction-units.png",
+          "db_letter": 111,
+          "transportation": 0,
+          "retailable": false,
+          "research": false
+        },
+        "anHour": 0.9857142857142858
+      }
+    ]
+  },
+  {
+    "name": "Hardware store",
+    "image": "images/landscape/hardware-store-lvl1.png",
+    "cost": 13800,
+    "costUnits": 4,
+    "steel": 100,
+    "wages": 172.5,
+    "secondsToBuild": 14400,
+    "category": "sales",
+    "kind": "d",
+    "retail": [
+      {
+        "resource": {
+          "name": "Bricks",
+          "image": "images/resources/bricks.png",
+          "db_letter": 102,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 6.0422380918321945,
+        "saturation": 0.1,
+        "retailModeling": "(Math.pow(price*5.014953 + (-15.009234 + (saturation - 0.5)/0.160440), 2.000000)*0.133920 + 27.671161)*amount"
+      },
+      {
+        "resource": {
+          "name": "Cement",
+          "image": "images/resources/cement.png",
+          "db_letter": 103,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 10.926178032966291,
+        "saturation": 0.1,
+        "retailModeling": "(Math.pow(price*3.027259 + (-20.281344 + (saturation - 0.5)/0.218227), 2.000000)*0.292029 + 36.314590)*amount"
+      },
+      {
+        "resource": {
+          "name": "Planks",
+          "image": "images/resources/planks.png",
+          "db_letter": 108,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 12.059618686425221,
+        "saturation": 0.2439205518091379,
+        "retailModeling": "(Math.pow(price*0.262222 + (-2.481848 + (saturation - 0.5)/4.034384), 2.000000)*53.143631 + 19.472041)*amount"
+      },
+      {
+        "resource": {
+          "name": "Windows",
+          "image": "images/resources/windows.png",
+          "db_letter": 109,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 117.37963553495831,
+        "saturation": 0.13224442914813953,
+        "retailModeling": "(Math.pow(price*1.447823 + (-145.601169 + (saturation - 0.5)/0.151118), 2.000000)*0.301670 + 79.663662)*amount"
+      },
+      {
+        "resource": {
+          "name": "Tools",
+          "image": "images/resources/tools.png",
+          "db_letter": 110,
+          "transportation": 1,
+          "retailable": true,
+          "research": false
+        },
+        "averagePrice": 199.24071536175785,
+        "saturation": 0.1,
+        "retailModeling": "(Math.pow(price*1.186214 + (-210.612732 + (saturation - 0.5)/0.190912), 2.000000)*0.307984 + 49.825523)*amount"
+      }
+    ]
+  }
+]

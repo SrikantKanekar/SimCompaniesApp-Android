@@ -1,0 +1,222 @@
+﻿{
+  "player": {
+    "id": 534139,
+    "company": "Avvon Electronics",
+    "logo": "https://d1fxy698ilbz6u.cloudfront.net/logo/ce378c430d8f09aeb89b4b6a32b1effbd686495f.png",
+    "level": 20,
+    "levelName": "Corporation",
+    "shareValue": 77.4,
+    "shares": 1000000,
+    "note": "Selling Q3 Flight Computer",
+    "maxBuildings": 10,
+    "rank": 1745,
+    "rating": "AAA",
+    "dateJoined": "Jul, 2020",
+    "lastSeen": "Today",
+    "timezoneOffset": -330,
+    "previousNames": [],
+    "workers": 6500,
+    "administrationOverhead": 1.3764705882352941,
+    "productionModifier": 3,
+    "salesModifier": 1,
+    "recreationBonus": 0,
+    "history": {
+      "value": 20776119,
+      "buildingValue": 5685600
+    },
+    "bondsSold": null,
+    "bondsSoldInterest": null,
+    "ratingBracket": "AAA to BBB-",
+    "courseId": null
+  },
+  "buildings": [
+    {
+      "id": 2923067,
+      "kind": "L",
+      "position": "B0",
+      "image": "images/landscape/efactory4-lvl3.png",
+      "category": "production",
+      "name": "Electronics factory",
+      "cost": 82800
+    },
+    {
+      "id": 2749614,
+      "kind": "L",
+      "position": "2",
+      "image": "images/landscape/efactory4-lvl3.png",
+      "category": "production",
+      "name": "Electronics factory",
+      "cost": 82800
+    },
+    {
+      "id": 2705346,
+      "kind": "L",
+      "position": "3",
+      "image": "images/landscape/efactory4-lvl3.png",
+      "category": "production",
+      "name": "Electronics factory",
+      "cost": 82800
+    },
+    {
+      "id": 2745321,
+      "kind": "L",
+      "position": "B1",
+      "image": "images/landscape/efactory4-lvl3.png",
+      "category": "production",
+      "name": "Electronics factory",
+      "cost": 82800
+    },
+    {
+      "id": 2722952,
+      "kind": "L",
+      "position": "6",
+      "image": "images/landscape/efactory4-lvl3.png",
+      "category": "production",
+      "name": "Electronics factory",
+      "cost": 82800
+    },
+    {
+      "id": 2713720,
+      "kind": "L",
+      "position": "1",
+      "image": "images/landscape/efactory4-lvl3.png",
+      "category": "production",
+      "name": "Electronics factory",
+      "cost": 82800
+    },
+    {
+      "id": 2713685,
+      "kind": "L",
+      "position": "5",
+      "image": "images/landscape/efactory4-lvl3.png",
+      "category": "production",
+      "name": "Electronics factory",
+      "cost": 82800
+    },
+    {
+      "id": 3156880,
+      "kind": "L",
+      "position": "B2",
+      "image": "images/landscape/efactory4-lvl3.png",
+      "category": "production",
+      "name": "Electronics factory",
+      "cost": 82800
+    },
+    {
+      "id": 2723882,
+      "kind": "L",
+      "position": "7",
+      "image": "images/landscape/efactory4-lvl3.png",
+      "category": "production",
+      "name": "Electronics factory",
+      "cost": 82800
+    },
+    {
+      "id": 3183748,
+      "kind": "L",
+      "position": "9",
+      "image": "images/landscape/efactory4-lvl3.png",
+      "category": "production",
+      "name": "Electronics factory",
+      "cost": 82800
+    },
+    {
+      "id": 3183752,
+      "kind": "L",
+      "position": "4",
+      "image": "images/landscape/efactory4-lvl3.png",
+      "category": "production",
+      "name": "Electronics factory",
+      "cost": 82800
+    },
+    {
+      "id": 2893924,
+      "kind": "8",
+      "position": "8",
+      "image": "images/landscape/aero-electronics-2-lvl3.png",
+      "category": "production",
+      "name": "Aerospace electronics",
+      "cost": 141450
+    },
+    {
+      "id": 2908207,
+      "kind": "8",
+      "position": "0",
+      "image": "images/landscape/aero-electronics-2-lvl3.png",
+      "category": "production",
+      "name": "Aerospace electronics",
+      "cost": 141450
+    }
+  ],
+  "certificates": [
+    {
+      "id": 4491,
+      "name": "The fastest growing employer",
+      "place": 1,
+      "kind": 6,
+      "dateInfo": "in week 30 of 2020",
+      "contestId": null
+    }
+  ],
+  "bonds": null,
+  "displayCase": [],
+  "upInRank": "Eqimxim",
+  "downInRank": "R0B Inc.",
+  "marketOrders": [
+    {
+      "id": 6765886,
+      "resource": {
+        "kind": 80,
+        "name": "Flight computer",
+        "image": "images/resources/flight-computer.png"
+      },
+      "quantity": 100,
+      "quality": 3,
+      "price": 5650
+    },
+    {
+      "id": 6761960,
+      "resource": {
+        "kind": 80,
+        "name": "Flight computer",
+        "image": "images/resources/flight-computer.png"
+      },
+      "quantity": 100,
+      "quality": 3,
+      "price": 5725
+    },
+    {
+      "id": 6712107,
+      "resource": {
+        "kind": 80,
+        "name": "Flight computer",
+        "image": "images/resources/flight-computer.png"
+      },
+      "quantity": 166,
+      "quality": 3,
+      "price": 5800
+    },
+    {
+      "id": 6701234,
+      "resource": {
+        "kind": 80,
+        "name": "Flight computer",
+        "image": "images/resources/flight-computer.png"
+      },
+      "quantity": 350,
+      "quality": 3,
+      "price": 5825
+    },
+    {
+      "id": 6638562,
+      "resource": {
+        "kind": 80,
+        "name": "Flight computer",
+        "image": "images/resources/flight-computer.png"
+      },
+      "quantity": 304,
+      "quality": 3,
+      "price": 5850
+    }
+  ]
+}

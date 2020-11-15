@@ -1,0 +1,85 @@
+﻿{
+  "chatrooms": [
+    {
+      "name": "Game",
+      "image": "images/chat-game2.png",
+      "db_letter": "G",
+      "show_rules": true,
+      "unread": 0,
+      "datetime": "2020-10-21T13:36:37.436241+00:00"
+    },
+    {
+      "name": "Social",
+      "image": "images/chat-social2.png",
+      "db_letter": "C",
+      "show_rules": true,
+      "unread": 0,
+      "datetime": "2020-10-21T13:36:37.436241+00:00"
+    },
+    {
+      "name": "Sale",
+      "image": "images/chat-sale2.png",
+      "db_letter": "S",
+      "show_rules": false,
+      "unread": 1582,
+      "datetime": "2020-10-21T13:36:37.436241+00:00"
+    },
+    {
+      "name": "Help",
+      "image": "images/chat-help2.png",
+      "db_letter": "H",
+      "show_rules": false,
+      "unread": 0,
+      "datetime": "2020-10-21T13:36:37.436241+00:00"
+    }
+  ],
+  "contacts": [
+    {
+      "company": "Yours Truly",
+      "logo": "https://d1fxy698ilbz6u.cloudfront.net/logo/ee1c13b51294988ac369ae397db759fe4cf8a026.png",
+      "certificates": 0,
+      "companyId": 574029,
+      "lastMessageId": 19439419,
+      "unread": 0,
+      "pinned": false
+    },
+    {
+      "company": "Your Personal Assistant",
+      "logo": "https://d1fxy698ilbz6u.cloudfront.net/logo/4afaed48a8e4c9373fa518ca59e1fd1cd5419dda.png",
+      "certificates": 0,
+      "companyId": 1352,
+      "lastMessageId": 19383460,
+      "unread": 0,
+      "pinned": false
+    },
+    {
+      "company": "WL Engenharia S.A",
+      "logo": "https://d1fxy698ilbz6u.cloudfront.net/logo/3fe9870b187130e0bb2ef32fe6e8dba0864560a7.png",
+      "certificates": 0,
+      "companyId": 518772,
+      "lastMessageId": 19306689,
+      "unread": 0,
+      "pinned": false
+    },
+    {
+      "company": "Don Exotic Ltd.",
+      "logo": "https://d1fxy698ilbz6u.cloudfront.net/logo/81a1ef6edfbad2ec6be1cb1a4adc17a17f91f0e0.png",
+      "certificates": 0,
+      "companyId": 384530,
+      "lastMessageId": 19304920,
+      "unread": 0,
+      "pinned": false
+    },
+    {
+      "company": "SANCHES. CO.",
+      "logo": "https://d1fxy698ilbz6u.cloudfront.net/logo/880c1cc705becfa588152888b108625209f5816e.png",
+      "certificates": 0,
+      "companyId": 520658,
+      "lastMessageId": 17861961,
+      "unread": 0,
+      "pinned": false
+    }
+  ],
+  "invisible": false,
+  "ignoringCompanies": []
+}

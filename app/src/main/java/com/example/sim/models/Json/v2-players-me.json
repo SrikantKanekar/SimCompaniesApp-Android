@@ -1,0 +1,59 @@
+﻿{
+  "authUser": {
+    "companyId": 534139,
+    "company": "Avvon Electronics",
+    "isModerator": false,
+    "auditAccess": false,
+    "isAdmin": false,
+    "money": 1658100,
+    "moneyExchangeLimit": 10000,
+    "simBoosts": 0,
+    "popupNotifications": {
+      "help": true,
+      "sale": true,
+      "social": true,
+      "other": true
+    },
+    "productionModifier": 3,
+    "salesModifier": 1,
+    "rank": 1745,
+    "extraExecutiveSlots": 2,
+    "extraBuildingSlots": 3,
+    "displayCaseSlots": 1,
+    "logo": "https://d1fxy698ilbz6u.cloudfront.net/logo/ce378c430d8f09aeb89b4b6a32b1effbd686495f.png",
+    "email": "kanekarsrikant01@gmail.com",
+    "bouncingEmail": false,
+    "supporter": false,
+    "startingPackPurchased": false,
+    "courseId": null,
+    "language": "en"
+  },
+  "levelInfo": {
+    "ratingCode": "AAA",
+    "levelName": "Corporation",
+    "level": 20,
+    "inTutorial": false,
+    "acceleration": {
+      "multiplier": 1,
+      "until": null
+    },
+    "experience": 95165,
+    "experienceToNextLevel": 110000,
+    "maxBuildings": 10,
+    "capabilities": {
+      "research": true,
+      "scrape": true,
+      "bonds": true,
+      "governmentOrders": true,
+      "executives": true
+    },
+    "timeLimit": 172800
+  },
+  "temporals": {
+    "sale": "",
+    "contest": {},
+    "economyState": 1
+  },
+  "encKey": null,
+  "courses": []
+}

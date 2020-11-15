@@ -1,0 +1,877 @@
+﻿[
+  {
+    "name": "Power",
+    "image": "images/resources/power.png",
+    "db_letter": 1,
+    "transportation": 0,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Water",
+    "image": "images/resources/water.png",
+    "db_letter": 2,
+    "transportation": 0,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Seeds",
+    "image": "images/resources/seeds.png",
+    "db_letter": 66,
+    "transportation": 0.1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Apples",
+    "image": "images/resources/apples.png",
+    "db_letter": 3,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Oranges",
+    "image": "images/resources/oranges.png",
+    "db_letter": 4,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Grapes",
+    "image": "images/resources/grapes.png",
+    "db_letter": 5,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Grain",
+    "image": "images/resources/grain.png",
+    "db_letter": 6,
+    "transportation": 0.1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Sugarcane",
+    "image": "images/resources/sugarcane.png",
+    "db_letter": 72,
+    "transportation": 0.1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Steak",
+    "image": "images/resources/steak.png",
+    "db_letter": 7,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Sausages",
+    "image": "images/resources/sausages.png",
+    "db_letter": 8,
+    "transportation": 0.1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Eggs",
+    "image": "images/resources/eggs.png",
+    "db_letter": 9,
+    "transportation": 0.1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Ethanol",
+    "image": "images/resources/ethanol.png",
+    "db_letter": 73,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Crude oil",
+    "image": "images/resources/crude-oil.png",
+    "db_letter": 10,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Methane",
+    "image": "images/resources/methane.png",
+    "db_letter": 74,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Petrol",
+    "image": "images/resources/petrol.png",
+    "db_letter": 11,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Diesel",
+    "image": "images/resources/diesel.png",
+    "db_letter": 12,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Transport",
+    "image": "images/resources/transport.png",
+    "db_letter": 13,
+    "transportation": 0,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Minerals",
+    "image": "images/resources/minerals.png",
+    "db_letter": 14,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Bauxite",
+    "image": "images/resources/bauxite.png",
+    "db_letter": 15,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Gold ore",
+    "image": "images/resources/gold-ore.png",
+    "db_letter": 68,
+    "transportation": 10,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Silicon",
+    "image": "images/resources/silicon.png",
+    "db_letter": 16,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Chemicals",
+    "image": "images/resources/chemicals.png",
+    "db_letter": 17,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Aluminium",
+    "image": "images/resources/aluminium.png",
+    "db_letter": 18,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Plastic",
+    "image": "images/resources/plastic.png",
+    "db_letter": 19,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Golden bars",
+    "image": "images/resources/golden-bars.png",
+    "db_letter": 69,
+    "transportation": 1000,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Processors",
+    "image": "images/resources/processors.png",
+    "db_letter": 20,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Electronic components",
+    "image": "images/resources/electronic-components.png",
+    "db_letter": 21,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Batteries",
+    "image": "images/resources/batteries.png",
+    "db_letter": 22,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Displays",
+    "image": "images/resources/displays.png",
+    "db_letter": 23,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Smart phones",
+    "image": "images/resources/smart-phones.png",
+    "db_letter": 24,
+    "transportation": 2,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Tablets",
+    "image": "images/resources/tablets.png",
+    "db_letter": 25,
+    "transportation": 2,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Laptops",
+    "image": "images/resources/laptops.png",
+    "db_letter": 26,
+    "transportation": 2,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Monitors",
+    "image": "images/resources/monitors.png",
+    "db_letter": 27,
+    "transportation": 2,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Televisions",
+    "image": "images/resources/televisions.png",
+    "db_letter": 28,
+    "transportation": 2,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Cotton",
+    "image": "images/resources/cotton.png",
+    "db_letter": 40,
+    "transportation": 0.5,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Fabric",
+    "image": "images/resources/fabric.png",
+    "db_letter": 41,
+    "transportation": 0.5,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Iron ore",
+    "image": "images/resources/iron-ore.png",
+    "db_letter": 42,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Steel",
+    "image": "images/resources/steel.png",
+    "db_letter": 43,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Sand",
+    "image": "images/resources/sand.png",
+    "db_letter": 44,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Glass",
+    "image": "images/resources/glass.png",
+    "db_letter": 45,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Leather",
+    "image": "images/resources/leather.png",
+    "db_letter": 46,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "On-board computer",
+    "image": "images/resources/on-board-computer.png",
+    "db_letter": 47,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Electric motor",
+    "image": "images/resources/electric-motor.png",
+    "db_letter": 48,
+    "transportation": 2,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Luxury car interior",
+    "image": "images/resources/luxury-car-interior.png",
+    "db_letter": 49,
+    "transportation": 2,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Basic interior",
+    "image": "images/resources/car-interior.png",
+    "db_letter": 50,
+    "transportation": 2,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Car body",
+    "image": "images/resources/car-body.png",
+    "db_letter": 51,
+    "transportation": 2,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Combustion engine",
+    "image": "images/resources/combustion-engine.png",
+    "db_letter": 52,
+    "transportation": 2,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Economy e-car",
+    "image": "images/resources/economy-e-car.png",
+    "db_letter": 53,
+    "transportation": 5,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Luxury e-car",
+    "image": "images/resources/luxury-e-car.png",
+    "db_letter": 54,
+    "transportation": 5,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Economy car",
+    "image": "images/resources/economy-car.png",
+    "db_letter": 55,
+    "transportation": 5,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Luxury car",
+    "image": "images/resources/luxury-car.png",
+    "db_letter": 56,
+    "transportation": 5,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Truck",
+    "image": "images/resources/truck.png",
+    "db_letter": 57,
+    "transportation": 5,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Bulldozer",
+    "image": "images/resources/bulldozer.png",
+    "db_letter": 112,
+    "transportation": 5,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Underwear",
+    "image": "images/resources/underwear.png",
+    "db_letter": 60,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Gloves",
+    "image": "images/resources/gloves.png",
+    "db_letter": 61,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Dress",
+    "image": "images/resources/dress.png",
+    "db_letter": 62,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Stiletto Heel",
+    "image": "images/resources/simmi-shoes.png",
+    "db_letter": 63,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Handbags",
+    "image": "images/resources/handbags.png",
+    "db_letter": 64,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Sneakers",
+    "image": "images/resources/sneakers.png",
+    "db_letter": 65,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Luxury watch",
+    "image": "images/resources/gold-watch.png",
+    "db_letter": 70,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Necklace",
+    "image": "images/resources/necklace.png",
+    "db_letter": 71,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Carbon fibers",
+    "image": "images/resources/carbon-fiber.png",
+    "db_letter": 75,
+    "transportation": 0.1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Carbon composite",
+    "image": "images/resources/carbon-composite.png",
+    "db_letter": 76,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Fuselage",
+    "image": "images/resources/fuselage.png",
+    "db_letter": 77,
+    "transportation": 2,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Wing",
+    "image": "images/resources/wing.png",
+    "db_letter": 78,
+    "transportation": 2,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "High grade e-comps",
+    "image": "images/resources/high-grade-e-components.png",
+    "db_letter": 79,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Flight computer",
+    "image": "images/resources/flight-computer.png",
+    "db_letter": 80,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Cockpit",
+    "image": "images/resources/cockpit.png",
+    "db_letter": 81,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Attitude control",
+    "image": "images/resources/attitude-control.png",
+    "db_letter": 82,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Rocket fuel",
+    "image": "images/resources/rocket-fuel.png",
+    "db_letter": 83,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Propellant tank",
+    "image": "images/resources/fuel-tank.png",
+    "db_letter": 84,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Solid fuel booster",
+    "image": "images/resources/solid-rocket.png",
+    "db_letter": 85,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Rocket engine",
+    "image": "images/resources/rocket-engine.png",
+    "db_letter": 86,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Heat shield",
+    "image": "images/resources/heat-shield.png",
+    "db_letter": 87,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Ion drive",
+    "image": "images/resources/ion-drive.png",
+    "db_letter": 88,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Jet engine",
+    "image": "images/resources/jet-engine.png",
+    "db_letter": 89,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Sub-orbital 2nd stage",
+    "image": "images/resources/sub-orbital-second-stage.png",
+    "db_letter": 90,
+    "transportation": 20,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Sub-orbital rocket",
+    "image": "images/resources/sub-orbital-rocket2.png",
+    "db_letter": 91,
+    "transportation": 20,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Orbital booster",
+    "image": "images/resources/orbital-booster.png",
+    "db_letter": 92,
+    "transportation": 100,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Starship",
+    "image": "images/resources/starship.png",
+    "db_letter": 93,
+    "transportation": 100,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "BFR",
+    "image": "images/resources/BFR.png",
+    "db_letter": 94,
+    "transportation": 2000,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Jumbo jet",
+    "image": "images/resources/jumbojet2.png",
+    "db_letter": 95,
+    "transportation": 2000,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Luxury jet",
+    "image": "images/resources/private-jet.png",
+    "db_letter": 96,
+    "transportation": 1000,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Single engine plane",
+    "image": "images/resources/single-engine.png",
+    "db_letter": 97,
+    "transportation": 100,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Quadcopter",
+    "image": "images/resources/quadcopter.png",
+    "db_letter": 98,
+    "transportation": 2,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Satellite",
+    "image": "images/resources/satellite.png",
+    "db_letter": 99,
+    "transportation": 10,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Reinforced concrete",
+    "image": "images/resources/reinforced-concrete.png",
+    "db_letter": 101,
+    "transportation": 10,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Bricks",
+    "image": "images/resources/bricks.png",
+    "db_letter": 102,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Cement",
+    "image": "images/resources/cement.png",
+    "db_letter": 103,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Clay",
+    "image": "images/resources/clay.png",
+    "db_letter": 104,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Limestone",
+    "image": "images/resources/limestone.png",
+    "db_letter": 105,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Wood",
+    "image": "images/resources/wood.png",
+    "db_letter": 106,
+    "transportation": 1,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Steel beams",
+    "image": "images/resources/steel-beams.png",
+    "db_letter": 107,
+    "transportation": 5,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Planks",
+    "image": "images/resources/planks.png",
+    "db_letter": 108,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Windows",
+    "image": "images/resources/windows.png",
+    "db_letter": 109,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Tools",
+    "image": "images/resources/tools.png",
+    "db_letter": 110,
+    "transportation": 1,
+    "retailable": true,
+    "research": false
+  },
+  {
+    "name": "Construction units",
+    "image": "images/resources/construction-units.png",
+    "db_letter": 111,
+    "transportation": 0,
+    "retailable": false,
+    "research": false
+  },
+  {
+    "name": "Plant research",
+    "image": "images/resources/plant-research.png",
+    "db_letter": 29,
+    "transportation": 0,
+    "retailable": false,
+    "research": true
+  },
+  {
+    "name": "Energy research",
+    "image": "images/resources/energy-research.png",
+    "db_letter": 30,
+    "transportation": 0,
+    "retailable": false,
+    "research": true
+  },
+  {
+    "name": "Mining research",
+    "image": "images/resources/mining-research.png",
+    "db_letter": 31,
+    "transportation": 0,
+    "retailable": false,
+    "research": true
+  },
+  {
+    "name": "Electronics research",
+    "image": "images/resources/electronics-research.png",
+    "db_letter": 32,
+    "transportation": 0,
+    "retailable": false,
+    "research": true
+  },
+  {
+    "name": "Breeding research",
+    "image": "images/resources/breeding-research.png",
+    "db_letter": 33,
+    "transportation": 0,
+    "retailable": false,
+    "research": true
+  },
+  {
+    "name": "Chemistry research",
+    "image": "images/resources/chemistry-research.png",
+    "db_letter": 34,
+    "transportation": 0,
+    "retailable": false,
+    "research": true
+  },
+  {
+    "name": "Software",
+    "image": "images/resources/software.png",
+    "db_letter": 35,
+    "transportation": 0,
+    "retailable": false,
+    "research": true
+  },
+  {
+    "name": "Automotive research",
+    "image": "images/resources/automotive-research.png",
+    "db_letter": 58,
+    "transportation": 0,
+    "retailable": false,
+    "research": true
+  },
+  {
+    "name": "Fashion research",
+    "image": "images/resources/fashion-research.png",
+    "db_letter": 59,
+    "transportation": 0,
+    "retailable": false,
+    "research": true
+  },
+  {
+    "name": "Aerospace research",
+    "image": "images/resources/aero-research.png",
+    "db_letter": 100,
+    "transportation": 0,
+    "retailable": false,
+    "research": true
+  },
+  {
+    "name": "Materials research",
+    "image": "images/resources/materials-research.png",
+    "db_letter": 113,
+    "transportation": 0,
+    "retailable": false,
+    "research": true
+  },
+  {
+    "name": "Xmas crackers",
+    "image": "images/resources/xmas-crackers.png",
+    "db_letter": 67,
+    "transportation": 0.5,
+    "retailable": true,
+    "research": false,
+    "season": [
+      12
+    ]
+  }
+]

@@ -1,0 +1,285 @@
+﻿[
+  {
+    "id": 2923067,
+    "kind": "L",
+    "position": "B0",
+    "image": "images/landscape/efactory4-lvl3.png",
+    "category": "production",
+    "name": "Electronics factory",
+    "cost": 82800,
+    "size": 5,
+    "busy": {
+      "started": "2020-10-21T02:49:40.663027+00:00",
+      "duration": 85172,
+      "resource": {
+        "amount": 139,
+        "quality": 2,
+        "unitCost": 790.8453911479829,
+        "kind": 79,
+        "name": "High grade e-comps",
+        "image": "images/resources/high-grade-e-components.png"
+      },
+      "canFetch": false
+    }
+  },
+  {
+    "id": 2749614,
+    "kind": "L",
+    "position": "2",
+    "image": "images/landscape/efactory4-lvl3.png",
+    "category": "production",
+    "name": "Electronics factory",
+    "cost": 82800,
+    "size": 5,
+    "busy": {
+      "started": "2020-10-21T02:49:35.397830+00:00",
+      "duration": 85172,
+      "resource": {
+        "amount": 139,
+        "quality": 2,
+        "unitCost": 791.832685104027,
+        "kind": 79,
+        "name": "High grade e-comps",
+        "image": "images/resources/high-grade-e-components.png"
+      },
+      "canFetch": false
+    }
+  },
+  {
+    "id": 2705346,
+    "kind": "L",
+    "position": "3",
+    "image": "images/landscape/efactory4-lvl3.png",
+    "category": "production",
+    "name": "Electronics factory",
+    "cost": 82800,
+    "size": 5,
+    "busy": {
+      "started": "2020-10-21T02:48:49.929066+00:00",
+      "duration": 85172,
+      "resource": {
+        "amount": 139,
+        "quality": 2,
+        "unitCost": 791.832685104027,
+        "kind": 79,
+        "name": "High grade e-comps",
+        "image": "images/resources/high-grade-e-components.png"
+      },
+      "canFetch": true
+    }
+  },
+  {
+    "id": 2745321,
+    "kind": "L",
+    "position": "B1",
+    "image": "images/landscape/efactory4-lvl3.png",
+    "category": "production",
+    "name": "Electronics factory",
+    "cost": 82800,
+    "size": 5,
+    "busy": {
+      "started": "2020-10-21T02:48:43.220034+00:00",
+      "duration": 85172,
+      "resource": {
+        "amount": 139,
+        "quality": 2,
+        "unitCost": 789.2960871841318,
+        "kind": 79,
+        "name": "High grade e-comps",
+        "image": "images/resources/high-grade-e-components.png"
+      },
+      "canFetch": true
+    }
+  },
+  {
+    "id": 2722952,
+    "kind": "L",
+    "position": "6",
+    "image": "images/landscape/efactory4-lvl3.png",
+    "category": "production",
+    "name": "Electronics factory",
+    "cost": 82800,
+    "size": 5,
+    "busy": {
+      "started": "2020-10-21T02:48:37.406890+00:00",
+      "duration": 85172,
+      "resource": {
+        "amount": 139,
+        "quality": 2,
+        "unitCost": 788.873320864149,
+        "kind": 79,
+        "name": "High grade e-comps",
+        "image": "images/resources/high-grade-e-components.png"
+      },
+      "canFetch": true
+    }
+  },
+  {
+    "id": 2713720,
+    "kind": "L",
+    "position": "1",
+    "image": "images/landscape/efactory4-lvl3.png",
+    "category": "production",
+    "name": "Electronics factory",
+    "cost": 82800,
+    "size": 5,
+    "busy": {
+      "started": "2020-10-21T02:48:32.060517+00:00",
+      "duration": 85172,
+      "resource": {
+        "amount": 139,
+        "quality": 2,
+        "unitCost": 788.873320864149,
+        "kind": 79,
+        "name": "High grade e-comps",
+        "image": "images/resources/high-grade-e-components.png"
+      },
+      "canFetch": true
+    }
+  },
+  {
+    "id": 2713685,
+    "kind": "L",
+    "position": "5",
+    "image": "images/landscape/efactory4-lvl3.png",
+    "category": "production",
+    "name": "Electronics factory",
+    "cost": 82800,
+    "size": 5,
+    "busy": {
+      "started": "2020-10-21T02:48:23.934562+00:00",
+      "duration": 85172,
+      "resource": {
+        "amount": 139,
+        "quality": 2,
+        "unitCost": 788.873320864149,
+        "kind": 79,
+        "name": "High grade e-comps",
+        "image": "images/resources/high-grade-e-components.png"
+      },
+      "canFetch": true
+    }
+  },
+  {
+    "id": 3156880,
+    "kind": "L",
+    "position": "B2",
+    "image": "images/landscape/efactory4-lvl3.png",
+    "category": "production",
+    "name": "Electronics factory",
+    "cost": 82800,
+    "size": 5,
+    "busy": {
+      "started": "2020-10-21T02:48:19.126318+00:00",
+      "duration": 85172,
+      "resource": {
+        "amount": 139,
+        "quality": 2,
+        "unitCost": 788.873320864149,
+        "kind": 79,
+        "name": "High grade e-comps",
+        "image": "images/resources/high-grade-e-components.png"
+      },
+      "canFetch": true
+    }
+  },
+  {
+    "id": 2723882,
+    "kind": "L",
+    "position": "7",
+    "image": "images/landscape/efactory4-lvl3.png",
+    "category": "production",
+    "name": "Electronics factory",
+    "cost": 82800,
+    "size": 5,
+    "busy": {
+      "started": "2020-10-21T02:48:13.512992+00:00",
+      "duration": 85172,
+      "resource": {
+        "amount": 139,
+        "quality": 2,
+        "unitCost": 788.873320864149,
+        "kind": 79,
+        "name": "High grade e-comps",
+        "image": "images/resources/high-grade-e-components.png"
+      },
+      "canFetch": true
+    }
+  },
+  {
+    "id": 3183748,
+    "kind": "L",
+    "position": "9",
+    "image": "images/landscape/efactory4-lvl3.png",
+    "category": "production",
+    "name": "Electronics factory",
+    "cost": 82800,
+    "size": 5,
+    "busy": {
+      "started": "2020-10-21T02:47:50.945197+00:00",
+      "duration": 85172,
+      "resource": {
+        "amount": 139,
+        "quality": 2,
+        "unitCost": 788.5802725419253,
+        "kind": 79,
+        "name": "High grade e-comps",
+        "image": "images/resources/high-grade-e-components.png"
+      },
+      "canFetch": true
+    }
+  },
+  {
+    "id": 3183752,
+    "kind": "L",
+    "position": "4",
+    "image": "images/landscape/efactory4-lvl3.png",
+    "category": "production",
+    "name": "Electronics factory",
+    "cost": 82800,
+    "size": 5,
+    "busy": {
+      "started": "2020-10-21T01:38:53.895157+00:00",
+      "duration": 86338,
+      "resource": {
+        "amount": 980,
+        "quality": 2,
+        "unitCost": 430.06681834949575,
+        "kind": 47,
+        "name": "On-board computer",
+        "image": "images/resources/on-board-computer.png"
+      },
+      "canFetch": false
+    }
+  },
+  {
+    "id": 2893924,
+    "kind": "8",
+    "position": "8",
+    "image": "images/landscape/aero-electronics-2-lvl3.png",
+    "category": "production",
+    "name": "Aerospace electronics",
+    "cost": 141450,
+    "size": 5,
+    "busy": {
+      "started": "2020-10-21T01:38:38.416586+00:00",
+      "duration": 86400,
+      "expanding": true
+    }
+  },
+  {
+    "id": 2908207,
+    "kind": "8",
+    "position": "0",
+    "image": "images/landscape/aero-electronics-2-lvl3.png",
+    "category": "production",
+    "name": "Aerospace electronics",
+    "cost": 141450,
+    "size": 5,
+    "busy": {
+      "started": "2020-10-21T01:38:25.557428+00:00",
+      "duration": 86400,
+      "expanding": true
+    }
+  }
+]

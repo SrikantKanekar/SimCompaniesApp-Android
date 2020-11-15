@@ -1,0 +1,235 @@
+﻿{
+  "name": "Apples",
+  "image": "images/resources/apples.png",
+  "db_letter": 3,
+  "transportation": 1,
+  "retailable": true,
+  "research": false,
+  "producedFrom": [
+    {
+      "resource": {
+        "name": "Water",
+        "image": "images/resources/water.png",
+        "db_letter": 2,
+        "transportation": 0,
+        "retailable": false,
+        "research": false
+      },
+      "amount": 3
+    },
+    {
+      "resource": {
+        "name": "Seeds",
+        "image": "images/resources/seeds.png",
+        "db_letter": 66,
+        "transportation": 0.1,
+        "retailable": false,
+        "research": false
+      },
+      "amount": 1
+    }
+  ],
+  "soldAt": {
+    "db_letter": "G",
+    "image": "images/landscape/grocery2-lvl1.png",
+    "images": [
+      "images/landscape/grocery2-lvl1.png",
+      "images/landscape/grocery2-lvl2.png",
+      "images/landscape/grocery2-lvl3.png"
+    ],
+    "name": "Grocery Store",
+    "category": "sales",
+    "cost": 10350
+  },
+  "producedAt": {
+    "db_letter": "P",
+    "image": "images/landscape/plantation-lvl1.png",
+    "images": [
+      "images/landscape/plantation-lvl1.png",
+      "images/landscape/plantation-lvl2.png"
+    ],
+    "name": "Plantation",
+    "category": "production",
+    "cost": 6900
+  },
+  "neededFor": [],
+  "transportNeeded": 1,
+  "producedAnHour": 202.18844174373334,
+  "baseSalary": 103.5,
+  "averageRetailPrice": 4.179307693062217,
+  "marketSaturation": 0.6407158176055606,
+  "marketSaturationLabel": "high",
+  "retailModeling": "(Math.pow(price*2.995075 + (-7.061656 + (saturation - 0.5)/0.455885), 2.000000)*0.748513 + 20.189612)*amount",
+  "storeBaseSalary": 138,
+  "retailData": [
+    {
+      "averagePrice": 4.088129669308222,
+      "demand": 0.6873915016942466,
+      "date": "2020-09-24",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.089673366286368,
+      "demand": 0.6901797558639918,
+      "date": "2020-09-25",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.019817100832202,
+      "demand": 0.6950062664053646,
+      "date": "2020-09-26",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.048306657111033,
+      "demand": 0.6909861506080542,
+      "date": "2020-09-27",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.1621630186827625,
+      "demand": 0.6925047357542,
+      "date": "2020-09-28",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.128503340156468,
+      "demand": 0.6833457240266267,
+      "date": "2020-09-29",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.1261925588364186,
+      "demand": 0.6815240983110865,
+      "date": "2020-09-30",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.229110398308604,
+      "demand": 0.6843283533715389,
+      "date": "2020-10-01",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.20812577809191,
+      "demand": 0.6815062008514712,
+      "date": "2020-10-02",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.176597815258443,
+      "demand": 0.6841482462535106,
+      "date": "2020-10-03",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.112163256206969,
+      "demand": 0.6845978474503297,
+      "date": "2020-10-04",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.121890959215183,
+      "demand": 0.691927683655462,
+      "date": "2020-10-05",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.0972576033209185,
+      "demand": 0.6938059618569359,
+      "date": "2020-10-06",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.109521717850586,
+      "demand": 0.6945240855396747,
+      "date": "2020-10-07",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.059035567708724,
+      "demand": 0.6975302327421017,
+      "date": "2020-10-08",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.170224019748635,
+      "demand": 0.70292582407085,
+      "date": "2020-10-09",
+      "label": "very high"
+    },
+    {
+      "averagePrice": 4.058993992029951,
+      "demand": 0.7017417648531039,
+      "date": "2020-10-10",
+      "label": "very high"
+    },
+    {
+      "averagePrice": 4.091990863250911,
+      "demand": 0.6942754142106394,
+      "date": "2020-10-11",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.1164828898859565,
+      "demand": 0.6905064499016602,
+      "date": "2020-10-12",
+      "label": "high"
+    },
+    {
+      "averagePrice": 3.9978659223583066,
+      "demand": 0.6928667235943788,
+      "date": "2020-10-13",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.105071216564738,
+      "demand": 0.6873243141449662,
+      "date": "2020-10-14",
+      "label": "high"
+    },
+    {
+      "averagePrice": 3.9634910327072412,
+      "demand": 0.6900126894360546,
+      "date": "2020-10-15",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.063285734551245,
+      "demand": 0.6874270719585758,
+      "date": "2020-10-16",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.036040290835102,
+      "demand": 0.6868722461233534,
+      "date": "2020-10-17",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.053828731672918,
+      "demand": 0.6847361166529348,
+      "date": "2020-10-18",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.048564144394989,
+      "demand": 0.678289801587948,
+      "date": "2020-10-19",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.077592142335859,
+      "demand": 0.6815246754162976,
+      "date": "2020-10-20",
+      "label": "high"
+    },
+    {
+      "averagePrice": 4.0714285079989905,
+      "demand": 0.6749583766192699,
+      "date": "2020-10-21",
+      "label": "high"
+    }
+  ],
+  "improvesQualityOf": []
+}
