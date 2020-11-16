@@ -2,12 +2,22 @@ package com.example.sim.persistence
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.example.sim.api.resource.responses.ResourceResponse
+import androidx.room.TypeConverters
+import com.example.sim.models.Building
+import com.example.sim.models.Player
+import com.example.sim.models.Resource
 
-@Database(entities = [ResourceResponse::class], version = 1)
-abstract class AppDatabase : RoomDatabase(){
+@Database(entities = [Building::class, Player::class, Resource::class], version = 1)
+@TypeConverters(Converters::class)
+abstract class AppDatabase : RoomDatabase() {
 
-    companion object{
+    abstract fun getBuildingDao(): BuildingDao
+
+    abstract fun getPlayerDao(): PlayerDao
+
+    abstract fun getResourceDao(): ResourceDao
+
+    companion object {
         const val DATABASE_NAME = "app_db"
     }
 }

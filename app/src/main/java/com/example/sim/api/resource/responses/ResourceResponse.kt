@@ -1,6 +1,8 @@
 package com.example.sim.api.resource.responses
 
 import android.os.Parcelable
+import androidx.room.Entity
+import com.example.sim.util.Constants.Companion.BASE_IMAGE_URL
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
@@ -12,5 +14,7 @@ data class ResourceResponse(
     val retailable: Boolean,
     val research: Boolean
 ) : Parcelable {
-    val resourceImageUrl get() = "https://d1fxy698ilbz6u.cloudfront.net/static/$image"
+
+    val resourceImageUrl get() = "$BASE_IMAGE_URL$image"
+
 }

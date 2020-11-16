@@ -22,7 +22,7 @@ suspend fun <T> safeApiCall(
 ): ApiResult<T?> {
     return withContext(dispatcher) {
         try {
-            withTimeout(NETWORK_TIMEOUT){
+            withTimeout(NETWORK_TIMEOUT) {
                 Success(apiCall.invoke())
             }
         } catch (throwable: Throwable) {
@@ -60,7 +60,7 @@ suspend fun <T> safeCacheCall(
 ): CacheResult<T?> {
     return withContext(dispatcher) {
         try {
-            withTimeout(CACHE_TIMEOUT){
+            withTimeout(CACHE_TIMEOUT) {
                 CacheResult.Success(cacheCall.invoke())
             }
         } catch (throwable: Throwable) {
@@ -81,7 +81,7 @@ fun <ViewState> buildError(
     message: String,
     uiComponentType: UIComponentType,
     stateEvent: StateEvent?
-): DataState<ViewState>{
+): DataState<ViewState> {
     return DataState.error(
         response = Response(
             message = "${stateEvent?.errorInfo()}\n\nReason: $message",

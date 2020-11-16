@@ -1,15 +1,16 @@
 package com.example.sim.ui
 
-import android.util.Log
-import androidx.lifecycle.*
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.sim.util.*
-import kotlinx.coroutines.*
+import com.example.sim.util.DataChannelManager
+import com.example.sim.util.DataState
+import com.example.sim.util.StateEvent
+import com.example.sim.util.StateMessage
 import kotlinx.coroutines.flow.Flow
 
 abstract class BaseViewModel<ViewState> : ViewModel() {
 
-    val TAG: String = "AppDebug"
     private val _viewState: MutableLiveData<ViewState> = MutableLiveData()
 
     val viewState: LiveData<ViewState>
@@ -27,8 +28,6 @@ abstract class BaseViewModel<ViewState> : ViewModel() {
 
     abstract fun setStateEvent(stateEvent: StateEvent)
 
-    abstract fun handleNewData(data: ViewState)
-
     private val dataChannelManager: DataChannelManager<ViewState> =
         object : DataChannelManager<ViewState>() {
             override fun handleNewData(data: ViewState) {
@@ -36,12 +35,13 @@ abstract class BaseViewModel<ViewState> : ViewModel() {
             }
         }
 
+    abstract fun handleNewData(data: ViewState)
+
     val numActiveJobs: LiveData<Int> = dataChannelManager.numActiveJobs
 
     val stateMessage: LiveData<StateMessage?>
         get() = dataChannelManager.messageStack.stateMessage
 
-    // FOR DEBUGGING
     fun getMessageStackSize(): Int {
         return dataChannelManager.messageStack.size
     }
@@ -62,7 +62,6 @@ abstract class BaseViewModel<ViewState> : ViewModel() {
     }
 
     fun isJobAlreadyActive(stateEvent: StateEvent): Boolean {
-        Log.d(TAG, "isJobAlreadyActive?: ${dataChannelManager.isJobAlreadyActive(stateEvent)} ")
         return dataChannelManager.isJobAlreadyActive(stateEvent)
     }
 
@@ -72,7 +71,6 @@ abstract class BaseViewModel<ViewState> : ViewModel() {
 
     open fun cancelActiveJobs() {
         if (areAnyJobsActive()) {
-            Log.d(TAG, "cancel active jobs: ${dataChannelManager.numActiveJobs.value ?: 0}")
             dataChannelManager.cancelJobs()
         }
     }

@@ -1,16 +1,12 @@
 package com.example.sim.util
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import kotlinx.android.parcel.IgnoredOnParcel
-import java.lang.IndexOutOfBoundsException
 
 const val MESSAGE_STACK_BUNDLE_KEY = "com.example.sim.util.MessageStack"
 
 class MessageStack: ArrayList<StateMessage>() {
-
-    private val TAG: String = "AppDebug"
 
     @IgnoredOnParcel
     private val _stateMessage: MutableLiveData<StateMessage?> = MutableLiveData()
@@ -44,7 +40,6 @@ class MessageStack: ArrayList<StateMessage>() {
                 setStateMessage(stateMessage = this[0])
             }
             else{
-                Log.d(TAG, "stack is empty: ")
                 setStateMessage(null)
             }
             return transaction

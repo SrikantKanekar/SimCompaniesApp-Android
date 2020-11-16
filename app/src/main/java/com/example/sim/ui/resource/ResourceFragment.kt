@@ -11,7 +11,8 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_resources.*
 
 @AndroidEntryPoint
-class ResourceFragment : BaseResourceFragment(R.layout.fragment_resources), ResourceAdapter.Interaction {
+class ResourceFragment : BaseResourceFragment(R.layout.fragment_resources),
+    ResourceAdapter.Interaction {
 
     lateinit var adapter: ResourceAdapter
 

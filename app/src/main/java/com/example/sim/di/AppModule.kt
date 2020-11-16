@@ -1,6 +1,13 @@
 package com.example.sim.di
 
+import android.app.Application
+import androidx.room.Room
 import com.example.sim.api.resource.ResourceApiService
+import com.example.sim.persistence.AppDatabase
+import com.example.sim.persistence.AppDatabase.Companion.DATABASE_NAME
+import com.example.sim.persistence.BuildingDao
+import com.example.sim.persistence.PlayerDao
+import com.example.sim.persistence.ResourceDao
 import com.example.sim.util.Constants
 import dagger.Module
 import dagger.Provides
@@ -24,6 +31,33 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideApi(retrofit: Retrofit): ResourceApiService =
+    fun provideResourceApi(retrofit: Retrofit): ResourceApiService =
         retrofit.create(ResourceApiService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideAppDatabase(app: Application): AppDatabase {
+        return Room
+            .databaseBuilder(app, AppDatabase::class.java, DATABASE_NAME)
+            .fallbackToDestructiveMigration()
+            .build()
+    }
+
+    @Singleton
+    @Provides
+    fun provideBuildingDao(appDatabase: AppDatabase): BuildingDao {
+        return appDatabase.getBuildingDao()
+    }
+
+    @Singleton
+    @Provides
+    fun providePlayerDao(appDatabase: AppDatabase): PlayerDao {
+        return appDatabase.getPlayerDao()
+    }
+
+    @Singleton
+    @Provides
+    fun provideResourceDao(appDatabase: AppDatabase): ResourceDao {
+        return appDatabase.getResourceDao()
+    }
 }

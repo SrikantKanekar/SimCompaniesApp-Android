@@ -6,13 +6,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.example.sim.R
-import com.example.sim.models.building.Building
+import com.example.sim.api.building.response.BuildingResponse
 import com.example.sim.ui.resource.ResourceViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_resources.*
 
 @AndroidEntryPoint
-class BuildingFragment : Fragment(R.layout.fragment_buildings), BuildingAdapter.Interaction {
+class BuildingFragment : Fragment(R.layout.fragment_building), BuildingAdapter.Interaction {
     private val viewModel by viewModels<ResourceViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -23,14 +23,9 @@ class BuildingFragment : Fragment(R.layout.fragment_buildings), BuildingAdapter.
         recycler_view.setHasFixedSize(true)
         recycler_view.adapter = adapter
 
-        viewModel.requestBuildings()
-
-        viewModel.getBuildings().observe(viewLifecycleOwner, Observer {
-            adapter.submitList(it)
-        })
     }
 
-    override fun onItemSelected(position: Int, item: Building) {
+    override fun onItemSelected(position: Int, item: BuildingResponse) {
 
     }
 }

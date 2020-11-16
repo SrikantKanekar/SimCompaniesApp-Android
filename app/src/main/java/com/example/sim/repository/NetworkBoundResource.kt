@@ -14,8 +14,7 @@ constructor(
     private val stateEvent: StateEvent,
     private val apiCall: suspend () -> NetworkObj?,
     private val cacheCall: suspend () -> CacheObj?
-)
-{
+) {
     private val TAG: String = "AppDebug"
 
     val result: Flow<DataState<ViewState>> = flow {
@@ -24,13 +23,13 @@ constructor(
         emit(returnCache(markJobComplete = false))
 
         // ****** STEP 2: MAKE NETWORK CALL, SAVE RESULT TO CACHE ******
-        val apiResult = safeApiCall(dispatcher){apiCall.invoke()}
+        val apiResult = safeApiCall(dispatcher) { apiCall.invoke() }
 
-        when(apiResult){
+        when (apiResult) {
             is ApiResult.GenericError -> {
                 emit(
                     buildError<ViewState>(
-                        apiResult.errorMessage?.let { it }?: UNKNOWN_ERROR,
+                        apiResult.errorMessage?.let { it } ?: UNKNOWN_ERROR,
                         UIComponentType.Dialog,
                         stateEvent
                     )
@@ -48,7 +47,7 @@ constructor(
             }
 
             is ApiResult.Success -> {
-                if(apiResult.value == null){
+                if (apiResult.value == null) {
                     emit(
                         buildError<ViewState>(
                             UNKNOWN_ERROR,
@@ -56,8 +55,7 @@ constructor(
                             stateEvent
                         )
                     )
-                }
-                else{
+                } else {
                     updateCache(apiResult.value as NetworkObj)
                 }
             }
@@ -69,14 +67,14 @@ constructor(
 
     private suspend fun returnCache(markJobComplete: Boolean): DataState<ViewState> {
 
-        val cacheResult = safeCacheCall(dispatcher){cacheCall.invoke()}
+        val cacheResult = safeCacheCall(dispatcher) { cacheCall.invoke() }
 
         var jobCompleteMarker: StateEvent? = null
-        if(markJobComplete){
+        if (markJobComplete) {
             jobCompleteMarker = stateEvent
         }
 
-        return object: CacheResponseHandler<ViewState, CacheObj>(
+        return object : CacheResponseHandler<ViewState, CacheObj>(
             response = cacheResult,
             stateEvent = jobCompleteMarker
         ) {

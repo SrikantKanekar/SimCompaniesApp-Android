@@ -10,19 +10,19 @@ import androidx.recyclerview.widget.DiffUtil
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.sim.R
-import com.example.sim.models.building.Building
+import com.example.sim.api.building.response.BuildingResponse
 import kotlinx.android.synthetic.main.item_building.view.*
 
 class BuildingAdapter(private val interaction: Interaction? = null) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Building>() {
+    val DIFF_CALLBACK = object : DiffUtil.ItemCallback<BuildingResponse>() {
 
-        override fun areItemsTheSame(oldItem: Building, newItem: Building): Boolean {
+        override fun areItemsTheSame(oldItem: BuildingResponse, newItem: BuildingResponse): Boolean {
             return oldItem.name == newItem.name
         }
 
-        override fun areContentsTheSame(oldItem: Building, newItem: Building): Boolean {
+        override fun areContentsTheSame(oldItem: BuildingResponse, newItem: BuildingResponse): Boolean {
             return oldItem == newItem
         }
 
@@ -54,7 +54,7 @@ class BuildingAdapter(private val interaction: Interaction? = null) :
         return differ.currentList.size
     }
 
-    fun submitList(list: List<Building>) {
+    fun submitList(list: List<BuildingResponse>) {
         differ.submitList(list)
     }
 
@@ -65,7 +65,7 @@ class BuildingAdapter(private val interaction: Interaction? = null) :
     ) : RecyclerView.ViewHolder(itemView) {
         private val TAG = "BuildingAdapter"
 
-        fun bind(item: Building) = with(itemView) {
+        fun bind(item: BuildingResponse) = with(itemView) {
             itemView.setOnClickListener {
                 interaction?.onItemSelected(adapterPosition, item)
             }
@@ -82,6 +82,6 @@ class BuildingAdapter(private val interaction: Interaction? = null) :
     }
 
     interface Interaction {
-        fun onItemSelected(position: Int, item: Building)
+        fun onItemSelected(position: Int, item: BuildingResponse)
     }
 }

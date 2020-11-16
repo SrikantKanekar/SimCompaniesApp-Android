@@ -14,7 +14,6 @@ import javax.inject.Singleton
 
 @Singleton
 class ResourceRepository @Inject constructor(private val resourceApiService: ResourceApiService) {
-    private val TAG = "Repository"
 
     fun searchResources(
         stateEvent: StateEvent

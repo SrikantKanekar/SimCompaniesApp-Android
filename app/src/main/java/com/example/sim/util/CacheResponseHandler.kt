@@ -1,12 +1,12 @@
 package com.example.sim.util
 
-abstract class CacheResponseHandler <ViewState, Data>(
+abstract class CacheResponseHandler<ViewState, Data>(
     private val response: CacheResult<Data?>,
     private val stateEvent: StateEvent?
-){
-    suspend fun getResult(): DataState<ViewState>{
+) {
+    suspend fun getResult(): DataState<ViewState> {
 
-        return when(response){
+        return when (response) {
 
             is CacheResult.GenericError -> {
                 DataState.error(
@@ -20,7 +20,7 @@ abstract class CacheResponseHandler <ViewState, Data>(
             }
 
             is CacheResult.Success -> {
-                if(response.value == null){
+                if (response.value == null) {
                     DataState.error(
                         response = Response(
                             message = "${stateEvent?.errorInfo()}\n\nReason: Data is NULL.",
@@ -29,8 +29,7 @@ abstract class CacheResponseHandler <ViewState, Data>(
                         ),
                         stateEvent = stateEvent
                     )
-                }
-                else{
+                } else {
                     handleSuccess(resultObj = response.value)
                 }
             }

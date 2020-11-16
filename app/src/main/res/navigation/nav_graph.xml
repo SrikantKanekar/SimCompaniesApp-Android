@@ -14,7 +14,7 @@
         android:id="@+id/buildingsFragment"
         android:name="com.example.sim.ui.building.BuildingFragment"
         android:label="Buildings"
-        tools:layout="@layout/fragment_buildings" />
+        tools:layout="@layout/fragment_building" />
     <fragment
         android:id="@+id/ordersFragment"
         android:name="com.example.sim.ui.orders.OrdersFragment"

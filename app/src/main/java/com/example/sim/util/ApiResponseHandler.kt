@@ -2,14 +2,14 @@ package com.example.sim.util
 
 import com.example.sim.util.ErrorHandling.Companion.NETWORK_ERROR
 
-abstract class ApiResponseHandler <ViewState, Data>(
+abstract class ApiResponseHandler<ViewState, Data>(
     private val response: ApiResult<Data?>,
     private val stateEvent: StateEvent
-){
+) {
     private val TAG: String = "AppDebug"
 
-    suspend fun getResult(): DataState<ViewState>{
-        return when(response){
+    suspend fun getResult(): DataState<ViewState> {
+        return when (response) {
 
             is ApiResult.GenericError -> {
                 DataState.error(
@@ -34,7 +34,7 @@ abstract class ApiResponseHandler <ViewState, Data>(
             }
 
             is ApiResult.Success -> {
-                if(response.value == null){
+                if (response.value == null) {
                     DataState.error(
                         response = Response(
                             message = "${stateEvent.errorInfo()}\n\nReason: Data is NULL.",
@@ -43,8 +43,7 @@ abstract class ApiResponseHandler <ViewState, Data>(
                         ),
                         stateEvent = stateEvent
                     )
-                }
-                else{
+                } else {
                     handleSuccess(resultObj = response.value)
                 }
             }
