@@ -1,4 +1,4 @@
-package com.example.sim.repository.resource
+package com.example.sim.repository
 
 import com.example.sim.api.resource.ResourceApiService
 import com.example.sim.api.resource.responses.ResourceResponse

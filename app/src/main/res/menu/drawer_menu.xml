@@ -2,18 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/resourceFragment"
-        android:icon="@drawable/ic_baseline_shopping_cart_24"
-        android:title="Resource" />
+        android:id="@+id/marketTrackerFragment"
+        android:icon="@drawable/ic_baseline_account_balance_24"
+        android:title="Market Tracker" />
 
     <item
-        android:id="@+id/buildingsFragment"
+        android:id="@+id/priceTrackerFragment"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:title="Price Tracker" />
+
+    <item
+        android:id="@+id/resourceFragment"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        android:title="Resources" />
+
+    <item
+        android:id="@+id/buildingFragment"
         android:icon="@drawable/ic_baseline_house_24"
         android:title="Buildings" />
 
-    <item
-        android:id="@+id/ordersFragment"
-        android:icon="@drawable/ic_baseline_shopping_cart_24"
-        android:title="Orders" />
+
+
 
 </menu>

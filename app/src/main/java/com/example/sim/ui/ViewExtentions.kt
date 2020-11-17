@@ -5,8 +5,6 @@ import android.widget.Toast
 import androidx.annotation.StringRes
 import com.example.sim.util.StateMessageCallback
 
-private val TAG: String = "AppDebug"
-
 fun Activity.displayToast(
     @StringRes message:Int,
     stateMessageCallback: StateMessageCallback

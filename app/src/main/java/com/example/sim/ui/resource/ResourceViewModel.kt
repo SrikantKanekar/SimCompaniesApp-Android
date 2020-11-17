@@ -2,7 +2,7 @@ package com.example.sim.ui.resource
 
 import androidx.hilt.lifecycle.ViewModelInject
 import com.example.sim.api.resource.responses.ResourceResponse
-import com.example.sim.repository.resource.ResourceRepository
+import com.example.sim.repository.ResourceRepository
 import com.example.sim.ui.BaseViewModel
 import com.example.sim.ui.resource.state.ResourceStateEvent.ResourceSearchEvent
 import com.example.sim.ui.resource.state.ResourceViewState

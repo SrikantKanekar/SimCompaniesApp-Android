@@ -4,20 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/resourceFragment">
-
     <fragment
         android:id="@+id/resourceFragment"
         android:name="com.example.sim.ui.resource.ResourceFragment"
-        android:label="Resource"
-        tools:layout="@layout/fragment_resources" />
+        android:label="Resources"
+        tools:layout="@layout/fragment_resources">
+        <action
+            android:id="@+id/action_resourceFragment2_to_viewResourceFragment"
+            app:destination="@id/viewResourceFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/buildingsFragment"
+        android:id="@+id/viewResourceFragment"
+        android:name="com.example.sim.ui.resource.ViewResourceFragment"
+        android:label="Resource"
+        tools:layout="@layout/fragment_view_resource" />
+    <fragment
+        android:id="@+id/buildingFragment"
         android:name="com.example.sim.ui.building.BuildingFragment"
         android:label="Buildings"
-        tools:layout="@layout/fragment_building" />
+        tools:layout="@layout/fragment_building">
+        <action
+            android:id="@+id/action_buildingFragment_to_viewBuildingFragment"
+            app:destination="@id/viewBuildingFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/ordersFragment"
-        android:name="com.example.sim.ui.orders.OrdersFragment"
-        android:label="Orders"
-        tools:layout="@layout/fragment_orders" />
+        android:id="@+id/viewBuildingFragment"
+        android:name="com.example.sim.ui.building.ViewBuildingFragment"
+        android:label="Building"
+        tools:layout="@layout/fragment_view_building" />
+    <fragment
+        android:id="@+id/priceTrackerFragment"
+        android:name="com.example.sim.ui.priceTracker.PriceTrackerFragment"
+        android:label="Price Tracker"
+        tools:layout="@layout/fragment_price_tracker">
+        <action
+            android:id="@+id/action_priceTrackerFragment_to_viewPriceTrackerFragment"
+            app:destination="@id/viewPriceTrackerFragment" />
+        <action
+            android:id="@+id/action_priceTrackerFragment_to_addPriceTrackerFragment"
+            app:destination="@id/addPriceTrackerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPriceTrackerFragment"
+        android:name="com.example.sim.ui.priceTracker.ViewPriceTrackerFragment"
+        android:label="fragment_view_price_tracker"
+        tools:layout="@layout/fragment_view_price_tracker" >
+        <action
+            android:id="@+id/action_viewPriceTrackerFragment_to_editPriceTrackerFragment"
+            app:destination="@id/editPriceTrackerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPriceTrackerFragment"
+        android:name="com.example.sim.ui.priceTracker.AddPriceTrackerFragment"
+        android:label="fragment_add_price_tracker"
+        tools:layout="@layout/fragment_add_price_tracker" />
+    <fragment
+        android:id="@+id/editPriceTrackerFragment"
+        android:name="com.example.sim.ui.priceTracker.EditPriceTrackerFragment"
+        android:label="fragment_edit_price_tracker"
+        tools:layout="@layout/fragment_edit_price_tracker" />
+    <fragment
+        android:id="@+id/marketTrackerFragment"
+        android:name="com.example.sim.ui.marketTracker.MarketTrackerFragment"
+        android:label="Market Tracker"
+        tools:layout="@layout/fragment_market_tracker">
+        <action
+            android:id="@+id/action_marketTrackerFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_marketTrackerFragment_to_marketPriceFragment"
+            app:destination="@id/marketPriceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/marketPriceFragment"
+        android:name="com.example.sim.ui.marketTracker.MarketPriceFragment"
+        android:label="fragment_market_price"
+        tools:layout="@layout/fragment_market_price" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.sim.ui.marketTracker.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
 </navigation>

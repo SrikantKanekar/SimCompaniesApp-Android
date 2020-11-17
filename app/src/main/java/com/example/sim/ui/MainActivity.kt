@@ -1,6 +1,7 @@
 package com.example.sim.ui
 
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -56,14 +57,11 @@ class MainActivity : BaseActivity() {
     }
 
     override fun displayProgressBar(isLoading: Boolean) {
-
-    }
-
-    override fun expandAppBar() {
-
-    }
-
-    override fun isStoragePermissionGranted(): Boolean {
-        return true
+        if(isLoading){
+            progress_bar.visibility = View.VISIBLE
+        }
+        else{
+            progress_bar.visibility = View.GONE
+        }
     }
 }
