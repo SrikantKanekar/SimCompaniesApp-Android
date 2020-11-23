@@ -3,6 +3,7 @@ package com.example.sim.api.building.response
 import android.os.Parcelable
 import androidx.room.Entity
 import com.example.sim.api.resource.responses.ResourceResponse
+import com.example.sim.models.Building
 import com.example.sim.util.Constants.Companion.BASE_IMAGE_URL
 import kotlinx.android.parcel.Parcelize
 
@@ -17,11 +18,11 @@ data class BuildingResponse(
     val secondsToBuild: Int,
     val category: String,
     val kind: String,
-    val production: List<Production>?,
-    val retail: List<Retail>?
+    val production: List<Production>,
+    val retail: List<Retail>
 ) : Parcelable {
 
-    val buildingImageUrl get() = "$BASE_IMAGE_URL$image"
+    private val buildingImageUrl get() = "$BASE_IMAGE_URL$image"
 
     @Parcelize
     data class Production(
@@ -36,4 +37,20 @@ data class BuildingResponse(
         val saturation: Float,
         val retailModeling: String
     ) : Parcelable
+
+    fun toBuilding(buildingResponse: BuildingResponse): Building {
+        return Building(
+            kind = kind,
+            name = name,
+            image = buildingImageUrl,
+            cost = cost,
+            costUnits = costUnits,
+            steel = steel,
+            wages = wages,
+            secondsToBuild = secondsToBuild,
+            category = category,
+            production = production,
+            retail = retail
+        )
+    }
 }

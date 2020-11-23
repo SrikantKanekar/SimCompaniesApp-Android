@@ -9,5 +9,7 @@ class Constants {
 
         const val NETWORK_TIMEOUT = 5000L
         const val CACHE_TIMEOUT = 2000L
+
+        const val TRANSPORT_COST = 0.38F
     }
 }

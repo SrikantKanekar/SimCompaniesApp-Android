@@ -1,6 +1,7 @@
 package com.example.sim.repository
 
 import com.example.sim.util.*
+import com.example.sim.util.ApiResult.*
 import com.example.sim.util.ErrorHandling.Companion.NETWORK_ERROR
 import com.example.sim.util.ErrorHandling.Companion.UNKNOWN_ERROR
 import kotlinx.coroutines.CoroutineDispatcher
@@ -15,8 +16,6 @@ constructor(
     private val apiCall: suspend () -> NetworkObj?,
     private val cacheCall: suspend () -> CacheObj?
 ) {
-    private val TAG: String = "AppDebug"
-
     val result: Flow<DataState<ViewState>> = flow {
 
         // ****** STEP 1: VIEW CACHE ******
@@ -26,32 +25,32 @@ constructor(
         val apiResult = safeApiCall(dispatcher) { apiCall.invoke() }
 
         when (apiResult) {
-            is ApiResult.GenericError -> {
+            is GenericError -> {
                 emit(
                     buildError<ViewState>(
                         apiResult.errorMessage?.let { it } ?: UNKNOWN_ERROR,
-                        UIComponentType.Dialog,
+                        UIComponentType.Toast,
                         stateEvent
                     )
                 )
             }
 
-            is ApiResult.NetworkError -> {
+            is NetworkError -> {
                 emit(
                     buildError<ViewState>(
                         NETWORK_ERROR,
-                        UIComponentType.Dialog,
+                        UIComponentType.None,
                         stateEvent
                     )
                 )
             }
 
-            is ApiResult.Success -> {
+            is Success -> {
                 if (apiResult.value == null) {
                     emit(
                         buildError<ViewState>(
                             UNKNOWN_ERROR,
-                            UIComponentType.Dialog,
+                            UIComponentType.None,
                             stateEvent
                         )
                     )

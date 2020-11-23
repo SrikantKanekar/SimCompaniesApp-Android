@@ -20,6 +20,11 @@ class Building(
     val wages: Float,
     val secondsToBuild: Int,
     val category: String,
-    val production: List<Production>,
-    val retail: List<Retail>
-) : Parcelable
+    val production: List<Production>? = null,
+    val retail: List<Retail>? = null
+) : Parcelable{
+
+    override fun equals(other: Any?): Boolean {
+        return super.equals(other)
+    }
+}

@@ -1,5 +1,6 @@
 package com.example.sim.ui
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,6 +12,7 @@ import kotlinx.coroutines.flow.Flow
 
 abstract class BaseViewModel<ViewState> : ViewModel() {
 
+    private val TAG = "DEBUG"
     private val _viewState: MutableLiveData<ViewState> = MutableLiveData()
 
     val viewState: LiveData<ViewState>

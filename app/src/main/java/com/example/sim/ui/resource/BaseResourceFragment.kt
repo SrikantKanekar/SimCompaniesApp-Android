@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import com.example.sim.ui.UICommunicationListener
 
@@ -17,7 +18,7 @@ constructor(
 
     val TAG: String = "AppDebug"
 
-    val viewModel by viewModels<ResourceViewModel>()
+    val viewModel: ResourceViewModel by activityViewModels()
     lateinit var uiCommunicationListener: UICommunicationListener
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -35,5 +36,4 @@ constructor(
             Log.e(TAG, "$context must implement UICommunicationListener")
         }
     }
-
 }

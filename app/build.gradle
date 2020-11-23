@@ -79,6 +79,11 @@ dependencies {
     //Material dialogs
     implementation "com.afollestad.material-dialogs:core:$material_dialogs_version"
 
+    //Swipe Refresh Layout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    implementation "com.synnapps:carouselview:0.1.5"
+
     //Leak Canary
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leak_canary_version"
 }

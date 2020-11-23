@@ -3,9 +3,12 @@ package com.example.sim.ui.resource
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.example.sim.R
 import com.example.sim.api.resource.responses.ResourceResponse
+import com.example.sim.models.Resource
 import com.example.sim.ui.resource.state.ResourceStateEvent
+import com.example.sim.ui.resource.state.ResourceStateEvent.*
 import com.example.sim.util.StateMessageCallback
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_resources.*
@@ -18,25 +21,31 @@ class ResourceFragment : BaseResourceFragment(R.layout.fragment_resources),
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        adapter = ResourceAdapter(this)
-
-        recycler_view.setHasFixedSize(true)
-        recycler_view.adapter = adapter
-
+        initRecyclerView()
         subscribeObservers()
+    }
 
-        viewModel.setStateEvent(ResourceStateEvent.ResourceSearchEvent())
+    override fun onResume() {
+        super.onResume()
+        getAllResources()
+    }
+
+    private fun getAllResources() {
+        if (viewModel.viewState.value == null){
+            viewModel.setStateEvent(GetAllResourcesEvent)
+        }
     }
 
     private fun subscribeObservers() {
         viewModel.viewState.observe(viewLifecycleOwner, Observer { viewState ->
-            viewState?.resourceResponseList?.let { list ->
-                adapter.submitList(list)
+            viewState?.let { viewState ->
+                viewState.resourceFields.resourcesList?.let { resourceList ->
+                    adapter.submitList(resourceList)
+                }
             }
         })
 
-        viewModel.numActiveJobs.observe(viewLifecycleOwner, Observer { jobCounter ->
+        viewModel.numActiveJobs.observe(viewLifecycleOwner, Observer {
             uiCommunicationListener.displayProgressBar(viewModel.areAnyJobsActive())
         })
 
@@ -54,7 +63,14 @@ class ResourceFragment : BaseResourceFragment(R.layout.fragment_resources),
         })
     }
 
-    override fun onItemSelected(position: Int, item: ResourceResponse) {
+    private fun initRecyclerView() {
+        adapter = ResourceAdapter(this)
+        recycler_view.setHasFixedSize(true)
+        recycler_view.adapter = adapter
+    }
 
+    override fun onItemSelected(position: Int, item: Resource) {
+        viewModel.setResourceId(item.db_letter)
+        findNavController().navigate(R.id.action_resourceFragment2_to_viewResourceFragment)
     }
 }

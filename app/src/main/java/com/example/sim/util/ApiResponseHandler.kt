@@ -1,17 +1,16 @@
 package com.example.sim.util
 
+import com.example.sim.util.ApiResult.*
 import com.example.sim.util.ErrorHandling.Companion.NETWORK_ERROR
 
 abstract class ApiResponseHandler<ViewState, Data>(
     private val response: ApiResult<Data?>,
     private val stateEvent: StateEvent
 ) {
-    private val TAG: String = "AppDebug"
-
     suspend fun getResult(): DataState<ViewState> {
         return when (response) {
 
-            is ApiResult.GenericError -> {
+            is GenericError -> {
                 DataState.error(
                     response = Response(
                         message = "${stateEvent.errorInfo()}\n\nReason: ${response.errorMessage.toString()}",
@@ -22,7 +21,7 @@ abstract class ApiResponseHandler<ViewState, Data>(
                 )
             }
 
-            is ApiResult.NetworkError -> {
+            is NetworkError -> {
                 DataState.error(
                     response = Response(
                         message = "${stateEvent.errorInfo()}\n\nReason: $NETWORK_ERROR",
@@ -33,7 +32,7 @@ abstract class ApiResponseHandler<ViewState, Data>(
                 )
             }
 
-            is ApiResult.Success -> {
+            is Success -> {
                 if (response.value == null) {
                     DataState.error(
                         response = Response(

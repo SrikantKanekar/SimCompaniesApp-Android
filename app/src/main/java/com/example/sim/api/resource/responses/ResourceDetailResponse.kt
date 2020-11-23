@@ -1,8 +1,7 @@
 package com.example.sim.api.resource.responses
 
 import android.os.Parcelable
-import androidx.room.Entity
-import com.example.sim.util.Constants
+import com.example.sim.models.Resource
 import com.example.sim.util.Constants.Companion.BASE_IMAGE_URL
 import kotlinx.android.parcel.Parcelize
 
@@ -15,19 +14,19 @@ data class ResourceDetailResponse(
     val retailable: Boolean,
     val research: Boolean,
     val producedFrom: List<ProducedFrom>,
-    val soldAt: List<SoldAt>,
+    val soldAt: SoldAt,
     val producedAt: ProducedAt,
     val neededFor: List<ResourceResponse>,
     val retailData: List<RetailData>,
     val improvesQualityOf: List<ResourceResponse>,
 ) : Parcelable {
 
-    val resourceImageUrl get() = "$BASE_IMAGE_URL$image"
+    private val resourceImageUrl get() = "$BASE_IMAGE_URL$image"
 
     @Parcelize
     data class ProducedFrom(
         val resourceResponse: ResourceResponse,
-        val amount: Int
+        val amount: Float
     ) : Parcelable
 
     @Parcelize
@@ -47,4 +46,21 @@ data class ResourceDetailResponse(
         val date: String,
         val label: String
     ) : Parcelable
+
+    fun toResource(): Resource {
+        return Resource(
+            db_letter = db_letter,
+            name = name,
+            image = resourceImageUrl,
+            transportation = transportation,
+            retailable = retailable,
+            research = research,
+            producedFrom = producedFrom,
+            soldAt = soldAt,
+            producedAt = producedAt,
+            neededFor = neededFor,
+            retailData = retailData,
+            improvesQualityOf = improvesQualityOf
+        )
+    }
 }

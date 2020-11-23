@@ -6,6 +6,7 @@ import androidx.room.TypeConverters
 import com.example.sim.models.Building
 import com.example.sim.models.Player
 import com.example.sim.models.Resource
+import com.example.sim.models.Resource.*
 
 @Database(entities = [Building::class, Player::class, Resource::class], version = 1)
 @TypeConverters(Converters::class)

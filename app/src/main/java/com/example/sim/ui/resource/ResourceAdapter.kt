@@ -10,19 +10,19 @@ import androidx.recyclerview.widget.DiffUtil
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.sim.R
-import com.example.sim.api.resource.responses.ResourceResponse
+import com.example.sim.models.Resource
 import kotlinx.android.synthetic.main.item_resource.view.*
 
 class ResourceAdapter(private val interaction: Interaction? = null) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<ResourceResponse>() {
+    private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Resource>() {
 
-        override fun areItemsTheSame(oldItem: ResourceResponse, newItem: ResourceResponse): Boolean {
+        override fun areItemsTheSame(oldItem: Resource, newItem: Resource): Boolean {
             return oldItem.name == newItem.name
         }
 
-        override fun areContentsTheSame(oldItem: ResourceResponse, newItem: ResourceResponse): Boolean {
+        override fun areContentsTheSame(oldItem: Resource, newItem: Resource): Boolean {
             return oldItem == newItem
         }
 
@@ -54,7 +54,7 @@ class ResourceAdapter(private val interaction: Interaction? = null) :
         return differ.currentList.size
     }
 
-    fun submitList(list: List<ResourceResponse>) {
+    fun submitList(list: List<Resource>) {
         differ.submitList(list)
     }
 
@@ -63,24 +63,24 @@ class ResourceAdapter(private val interaction: Interaction? = null) :
         itemView: View,
         private val interaction: Interaction?
     ) : RecyclerView.ViewHolder(itemView) {
-        private val TAG = "ResourceAdapter"
+        private val TAG = "DEBUG"
 
-        fun bind(item: ResourceResponse) = with(itemView) {
+        fun bind(item: Resource) = with(itemView) {
             itemView.setOnClickListener {
                 interaction?.onItemSelected(adapterPosition, item)
             }
             Glide.with(itemView)
-                .load(item.resourceImageUrl)
+                .load(item.image)
                 .centerCrop()
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .error(R.drawable.ic_launcher_background)
                 .into(image_view)
             itemView.text_view_user_name.text = item.name
-            Log.d(TAG, "bind: ${item.toString()}")
+            Log.d(TAG, "Resource : $item")
         }
     }
 
     interface Interaction {
-        fun onItemSelected(position: Int, item: ResourceResponse)
+        fun onItemSelected(position: Int, item: Resource)
     }
 }

@@ -2,6 +2,8 @@ package com.example.sim.di
 
 import android.app.Application
 import androidx.room.Room
+import com.example.sim.api.building.BuildingApiService
+import com.example.sim.api.market.MarketApiService
 import com.example.sim.api.resource.ResourceApiService
 import com.example.sim.persistence.AppDatabase
 import com.example.sim.persistence.AppDatabase.Companion.DATABASE_NAME
@@ -33,6 +35,16 @@ object AppModule {
     @Singleton
     fun provideResourceApi(retrofit: Retrofit): ResourceApiService =
         retrofit.create(ResourceApiService::class.java)
+
+    @Provides
+    @Singleton
+    fun provideBuildingApi(retrofit: Retrofit): BuildingApiService =
+        retrofit.create(BuildingApiService::class.java)
+
+    @Provides
+    @Singleton
+    fun provideMarketApi(retrofit: Retrofit): MarketApiService =
+        retrofit.create(MarketApiService::class.java)
 
     @Singleton
     @Provides

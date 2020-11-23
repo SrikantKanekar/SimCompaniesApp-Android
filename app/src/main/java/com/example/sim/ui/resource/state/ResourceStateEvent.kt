@@ -3,17 +3,27 @@ package com.example.sim.ui.resource.state
 import com.example.sim.util.StateEvent
 
 sealed class ResourceStateEvent : StateEvent {
-    class ResourceSearchEvent() : ResourceStateEvent() {
+    object GetAllResourcesEvent : ResourceStateEvent() {
         override fun errorInfo(): String {
-            return "Error Searching Resources"
+            return "Error Retrieving Resources"
         }
 
         override fun toString(): String {
-            return "ResourceSearchEvent"
+            return "GetAllResourcesEvent"
         }
     }
 
-    class None(): ResourceStateEvent(){
+    object GetResourceByIdEvent: ResourceStateEvent(){
+        override fun errorInfo(): String {
+            return "Error Retrieving Resource"
+        }
+
+        override fun toString(): String {
+            return "GetResourceByIdEvent"
+        }
+    }
+
+    object None : ResourceStateEvent() {
         override fun errorInfo(): String {
             return "None"
         }
