@@ -17,4 +17,8 @@ interface MarketTrackerRepository {
         resource: Resource,
         stateEvent: StateEvent
     ): Flow<DataState<MarketTrackerViewState>>
+
+    fun scanMarket(
+        stateEvent: StateEvent
+    ): Flow<DataState<MarketTrackerViewState>>
 }

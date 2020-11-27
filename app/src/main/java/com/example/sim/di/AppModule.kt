@@ -1,6 +1,9 @@
 package com.example.sim.di
 
 import android.app.Application
+import android.content.Context
+import android.content.SharedPreferences
+import androidx.preference.PreferenceManager
 import androidx.room.Room
 import com.example.sim.api.building.BuildingApiService
 import com.example.sim.api.market.MarketApiService

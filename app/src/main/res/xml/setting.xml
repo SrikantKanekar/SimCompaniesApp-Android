@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="PLAYER">
+        <EditTextPreference
+            android:icon="@drawable/ic_baseline_house_24"
+            android:key="company_name_preference"
+            android:title="Company Name"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="MARKET">
+        <SwitchPreferenceCompat
+            android:enabled="false"
+            android:key="market_on_off_preference"
+            android:title="Market Tracker" />
+
+        <EditTextPreference
+            android:defaultValue="5000"
+            android:key="min_profit_preferences"
+            android:title="Minimum Profit"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue="1000000"
+            android:key="max_cost_preferences"
+            android:title="Maximum Cost"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue="3"
+            android:key="max_order_preferences"
+            android:title="Maximum Orders"
+            app:useSimpleSummaryProvider="true" />
+
+        <SeekBarPreference
+            android:defaultValue="3"
+            android:key="max_quality_preferences"
+            android:max="6"
+            android:title="Maximum Quality"
+            app:showSeekBarValue="true"/>
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="NOTIFICATION">
+        <Preference
+            android:enabled="false"
+            android:icon="@drawable/ic_baseline_notifications_none_24"
+            android:title="Notification" />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="OTHER SETTINGS">
+        <ListPreference
+            android:defaultValue="default"
+            android:entries="@array/theme_preference_array_entries"
+            android:entryValues="@array/theme_preference_array_entry_values"
+            android:icon="@drawable/ic_baseline_brightness_4_24"
+            android:key="theme_preference"
+            android:title="Theme"
+            app:useSimpleSummaryProvider="true" />
+        <Preference
+            android:enabled="false"
+            android:icon="@drawable/ic_baseline_error_outline_24"
+            android:title="About" />
+    </PreferenceCategory>
+</PreferenceScreen>

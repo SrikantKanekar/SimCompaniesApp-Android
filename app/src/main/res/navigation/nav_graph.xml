@@ -89,4 +89,8 @@
         android:name="com.example.sim.ui.marketTracker.ResultFragment"
         android:label="Result"
         tools:layout="@layout/fragment_result" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.sim.ui.settings.SettingsFragment"
+        android:label="Settings" />
 </navigation>

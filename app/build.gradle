@@ -12,7 +12,7 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.example.simcompanies"
+        applicationId "com.example.sim"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -83,6 +83,8 @@ dependencies {
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
     implementation "com.synnapps:carouselview:0.1.5"
+
+    implementation "androidx.preference:preference-ktx:1.1.1"
 
     //Leak Canary
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leak_canary_version"

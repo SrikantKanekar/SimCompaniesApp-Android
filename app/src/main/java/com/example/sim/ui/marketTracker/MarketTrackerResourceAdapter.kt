@@ -59,6 +59,10 @@ class MarketTrackerResourceAdapter(private val interaction: Interaction? = null)
         differ.submitList(list)
     }
 
+    fun getList():List<Resource> {
+        return differ.currentList
+    }
+
     class MarketTrackerResourceViewHolder
     constructor(
         itemView: View,

@@ -9,10 +9,25 @@ data class MarketResponse(
     val seller: Seller,
     val posted: String,
     val fees: Float
-){
+) {
     data class Seller(
         val id: Int,
         val company: String,
         val logo: String,
     )
+
+    companion object {
+        fun dummyMarketResponse(decrementedPrice: Float): MarketResponse {
+            return MarketResponse(
+                0,
+                1000,
+                0,
+                0,
+                decrementedPrice,
+                MarketResponse.Seller(0, "", ""),
+                "",
+                0F
+            )
+        }
+    }
 }

@@ -1,8 +1,9 @@
 package com.example.sim.models
 
 data class Profit(
-    val buyAt: CombineOrder,
+    val resource: Resource,
+    val buyAt: CombinedOrder,
     val sellAt: Float,
-    val profitValue: Float,
-    val cost: Float
+    val totalCost: Float,
+    val totalProfit: Float
 )

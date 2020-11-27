@@ -16,14 +16,24 @@
 
         <TextView
             android:id="@+id/text_view_buy"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="18dp"
             android:textAppearance="?attr/textAppearanceHeadline5"
-            tools:text="BUY 3 ORDERS " />
+            tools:text="FLIGHT COMPUTER BUY 3 ORDERS " />
 
+        <RatingBar
+            android:id="@+id/rating_bar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:progressTint="#ECD827"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="20dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_profit_order"
@@ -31,6 +41,7 @@
             android:layout_height="110dp"
             android:layout_below="@id/text_view_buy"
             android:overScrollMode="never"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_profit_order" />
 
@@ -39,10 +50,10 @@
             android:id="@+id/chip_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_below="@id/recycler_view_profit_order"
-            android:paddingTop="2dp"
-            android:layout_marginEnd="2dp">
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:paddingTop="2dp">
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip_sell_at"

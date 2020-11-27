@@ -41,6 +41,7 @@
             android:layout_height="wrap_content"
             android:isIndicator="true"
             android:layout_alignParentEnd="true"
+            android:progressTint="#ECD827"
             android:layout_margin="20dp"
             style="?android:attr/ratingBarStyleSmall"
             android:numStars="6"

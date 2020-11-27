@@ -2,39 +2,44 @@ package com.example.sim.util
 
 import android.util.Log
 import com.example.sim.api.market.response.MarketResponse
-import com.example.sim.models.CombineOrder
+import com.example.sim.models.CombinedOrder
 import com.example.sim.models.Profit
 import com.example.sim.models.Resource
 
 private const val TAG = "DEBUG_TRACKER"
 
-class MarketTracker {
-
+class MarketTracker constructor(
+    private val resource: Resource,
+    private val marketResponse: List<MarketResponse>,
+    private val minProfit: Int,
+    private val maxCost: Int,
+    private val maxQuality: Int,
+    private val maxOrders: Int
+) {
     var transportCost = 0F
 
-    fun calculate(
-        resource: Resource,
-        marketResponse: List<MarketResponse>
-    ): List<Profit> {
+    fun calculate(): List<Profit> {
 
         transportCost = transportCost(resource)
         Log.d(TAG, "calculate: Transport cost = $transportCost")
 
         val profitList = ArrayList<Profit>()
 
-        if (marketResponse.isEmpty()){
+        if (marketResponse.isEmpty()) {
+            Log.d(TAG, "calculate: MarketResponse is empty. Returning empty List")
             return emptyList()
         }
 
         val twoDimensionalArray = getTwoDimensionalArray(marketResponse)
-        for (array in twoDimensionalArray){
-            for (order in array){
+        for (array in twoDimensionalArray) {
+            for (order in array) {
                 Log.d(TAG, "calculate: printing 2D array : ${order.price}")
             }
         }
 
         for (orders in twoDimensionalArray) {
             val profit = getProfit(orders)
+            Log.d(TAG, "calculate: Profits in $orders: size ${profit.size}")
             profitList.addAll(profit)
         }
         return profitList
@@ -45,7 +50,6 @@ class MarketTracker {
         var currentList = ArrayList<MarketResponse>()
 
         var quality = orders[0].quality
-        Log.d(TAG, "getTwoDimensionalArray: quality of first order : $quality")
 
         for (i in orders.indices) {
 
@@ -53,42 +57,55 @@ class MarketTracker {
 
                 i == 0 -> {
                     currentList.add(orders[i])
-                    Log.d(TAG, "getTwoDimensionalArray: Added $i order to currentList ${orders[i].price}")
+                    Log.d(
+                        TAG,
+                        "getTwoDimensionalArray: Added $i order to currentList ${orders[i].price}"
+                    )
                 }
 
-                i == orders.size-1 -> {
+                quality == orders[i].quality -> {
                     currentList.add(orders[i])
-                    twoDimensionalArray.add(currentList)
-                    Log.d(TAG, "getTwoDimensionalArray: Added $i order to currentList ${orders[i].price}\n " +
-                            "------------------------------------------------------------------------")
+                    Log.d(
+                        TAG,
+                        "getTwoDimensionalArray: Added $i order to currentList ${orders[i].price}"
+                    )
                 }
 
                 quality < orders[i].quality -> {
-                    val dummyOrder = MarketResponse(
-                        0,
-                        1000,
-                        0,
-                        0,
-                        getDecrementedPrice(orders[i].price),
-                        MarketResponse.Seller(0, "", ""),
-                        "",
-                        0F
-                    )
+                    val decrementedPrice = getDecrementedPrice(orders[i].price)
+                    val dummyOrder = MarketResponse.dummyMarketResponse(decrementedPrice)
                     currentList.add(dummyOrder)
-                    Log.d(TAG, "getTwoDimensionalArray: Added dummy order to currentList ${dummyOrder.price}")
+                    Log.d(
+                        TAG,
+                        "getTwoDimensionalArray: Added dummy order to currentList ${dummyOrder.price}"
+                    )
 
                     twoDimensionalArray.add(currentList)
 
                     currentList = ArrayList()
                     quality = orders[i].quality
-
+                    if(quality > maxQuality) {
+                        Log.d(TAG, "getTwoDimensionalArray: ----------Breaking------------------")
+                        break
+                    }
                     currentList.add(orders[i])
-                    Log.d(TAG, "getTwoDimensionalArray: Added $i order to currentList ${orders[i].price}")
+                    Log.d(
+                        TAG,
+                        "getTwoDimensionalArray: Added $i order to currentList ${orders[i].price}"
+                    )
                 }
 
-                quality == orders[i].quality -> {
+                i == orders.size - 1 -> {
                     currentList.add(orders[i])
-                    Log.d(TAG, "getTwoDimensionalArray: Added $i order to currentList ${orders[i].price}")
+                    twoDimensionalArray.add(currentList)
+                    Log.d(
+                        TAG,
+                        "getTwoDimensionalArray: Added $i order to currentList ${orders[i].price}"
+                    )
+                    Log.d(
+                        TAG,
+                        "getTwoDimensionalArray: -----------------------------------------------"
+                    )
                 }
             }
         }
@@ -98,58 +115,74 @@ class MarketTracker {
     private fun getProfit(orders: List<MarketResponse>): List<Profit> {
         val profit = ArrayList<Profit>()
 
-        for (i in orders.indices) {
+        for (i in 1 until orders.size) {
             val currentOrder = orders[i]
-
             val combineList = ArrayList<MarketResponse>()
+
+            if (i > maxOrders){
+                Log.d(TAG, "getProfit: --------------------Breaking---------------------")
+                break
+            }
+
             for (j in 0 until i) {
                 combineList.add(orders[j])
                 Log.d(TAG, "getProfit: Adding orders to combineList for $i : $j")
             }
 
             val combinedOrder = combineOrders(combineList)
-            Log.d(TAG, "getProfit: combinedOrder for $i : ${combinedOrder.avgPrice} ${combinedOrder.totalQuantity}")
+            Log.d(
+                TAG,
+                "getProfit: combinedOrder for $i : ${combinedOrder.avgPrice} ${combinedOrder.totalQuantity}"
+            )
 
             val currentProfit = compareOrders(currentOrder, combinedOrder)
-            Log.d(TAG, "getProfit: currentProfit for $i ${currentProfit.profitValue}")
+            Log.d(TAG, "getProfit: currentProfit for $i ${currentProfit?.totalProfit}")
 
-            if (currentProfit.profitValue > 0F) {
+            if (currentProfit != null) {
                 profit.add(currentProfit)
             }
         }
         return profit
     }
 
-    private fun compareOrders(currentOrder: MarketResponse, combinedOrder: CombineOrder): Profit {
-        var sellAt = currentOrder.price
+    private fun compareOrders(currentOrder: MarketResponse, combinedOrder: CombinedOrder): Profit? {
+        val cost = combinedOrder.avgPrice * combinedOrder.totalQuantity
+        if (cost > maxCost){
+            Log.d(TAG, "compareOrders: Exceeded Cost $cost-------------------------------")
+            return null
+        }
 
-        if (currentOrder.kind != 1000){
+        var sellAt = currentOrder.price
+        if (currentOrder.kind != 1000) {
             sellAt -= getDecrementedPrice(currentOrder.price)
         }
 
-        val profitValue = sellAt - combinedOrder.avgPrice - transportCost - exchangeCost(currentOrder.price)
-
-        val cost = combinedOrder.avgPrice * combinedOrder.totalQuantity
+        val profitValue =
+            sellAt - combinedOrder.avgPrice - transportCost - exchangeCost(currentOrder.price)
+        val totalProfit = profitValue * combinedOrder.totalQuantity
+        if (totalProfit < minProfit){
+            Log.d(TAG, "compareOrders: lower Profit $profitValue-------------------------")
+            return null
+        }
 
         return Profit(
+            resource = resource,
             buyAt = combinedOrder,
             sellAt = sellAt,
-            profitValue = (profitValue * combinedOrder.totalQuantity),
-            cost = cost
+            totalProfit = totalProfit,
+            totalCost = cost
         )
     }
 
-    private fun combineOrders(orders: ArrayList<MarketResponse>): CombineOrder {
+    private fun combineOrders(orders: ArrayList<MarketResponse>): CombinedOrder {
         var quantity = 0
         var sum = 0F
-
         for (order in orders) {
             quantity += order.quantity
             sum += order.quantity * order.price
         }
         val avgPrice = sum / quantity
-
-        return CombineOrder(orders, avgPrice, quantity)
+        return CombinedOrder(orders, avgPrice, quantity)
     }
 
     private fun getDecrementedPrice(price: Float): Float {

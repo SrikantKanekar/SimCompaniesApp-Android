@@ -7,9 +7,14 @@ class Constants {
         const val BASE_URL = "https://www.simcompanies.com/api/"
         const val BASE_IMAGE_URL = "https://d1fxy698ilbz6u.cloudfront.net/static/"
 
-        const val NETWORK_TIMEOUT = 5000L
+        const val NETWORK_TIMEOUT = 60000L
         const val CACHE_TIMEOUT = 2000L
 
         const val TRANSPORT_COST = 0.38F
+
+        const val SORT_PROFIT = "SORT_PROFIT"
+        const val SORT_COST = "SORT_COST"
+        const val SORT_QUALITY = "SORT_QUALITY"
+        const val SORT_ORDERS = "SORT_ORDERS"
     }
 }

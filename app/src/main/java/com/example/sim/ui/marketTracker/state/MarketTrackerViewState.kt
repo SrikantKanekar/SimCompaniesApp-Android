@@ -9,13 +9,15 @@ data class MarketTrackerViewState(
     var marketPriceFields: MarketPriceFields = MarketPriceFields()
 ) {
     data class MarketTrackerFields(
-        var resourceList: List<Resource>? = null
+        var resourceList: List<Resource>? = null,
+        var profits: List<Profit>? = null,
+        var filter: String? = null
     )
 
     data class MarketPriceFields(
         var marketOrderList: List<MarketResponse>? = null,
+        var profits: List<Profit>? = null,
         var resource: Resource? = null,
-        var resourceId: Int? = null,
-        var profits: List<Profit>? = null
+        var filter: String? = null
     )
 }

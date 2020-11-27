@@ -62,7 +62,10 @@ class MarketOrderAdapter(private val interaction: Interaction? = null) :
 
     fun submitList(list: List<MarketResponse>) {
         differ.submitList(list)
-        notifyDataSetChanged()
+    }
+
+    fun getList(): List<MarketResponse> {
+        return differ.currentList
     }
 
     class OrdersViewHolder

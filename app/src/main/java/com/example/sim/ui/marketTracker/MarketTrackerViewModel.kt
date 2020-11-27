@@ -13,27 +13,39 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 class MarketTrackerViewModel @ViewModelInject constructor(
-    private val marketTrackerRepository: MarketTrackerRepositoryImpl
+    private val marketTrackerRepository: MarketTrackerRepositoryImpl,
+    private val preferences: MyPreferences
 ) : BaseViewModel<MarketTrackerViewState>() {
 
+    init {
+        getProfitFilter()
+    }
+
     override fun handleNewData(data: MarketTrackerViewState) {
-        data.marketPriceFields.let { marketPriceFields ->
-            marketPriceFields.marketOrderList?.let { marketOrderList ->
-                setMarketOrderListData(marketOrderList)
-            }
-        }
-
-        data.marketPriceFields.let { marketPriceFields ->
-            marketPriceFields.profits?.let { profits ->
-                setMarketProfitsData(profits)
-            }
-        }
-
         data.marketTrackerFields.let { marketTrackerFields ->
             marketTrackerFields.resourceList?.let { resourceList ->
                 setResourceListData(resourceList)
             }
         }
+
+        data.marketTrackerFields.let { marketTrackerFields ->
+            marketTrackerFields.profits?.let { profits ->
+                setMarketProfitData(profits)
+            }
+        }
+
+        data.marketPriceFields.let { marketPriceFields ->
+            marketPriceFields.marketOrderList?.let { marketOrderList ->
+                setOrderListData(marketOrderList)
+            }
+        }
+
+        data.marketPriceFields.let { marketPriceFields ->
+            marketPriceFields.profits?.let { profits ->
+                setResourceProfitData(profits)
+            }
+        }
+
     }
 
     override fun setStateEvent(stateEvent: StateEvent) {
@@ -50,6 +62,12 @@ class MarketTrackerViewModel @ViewModelInject constructor(
                     is GetMarketDataByIdEvent -> {
                         marketTrackerRepository.getMarketDataById(
                             resource = getResource(),
+                            stateEvent = stateEvent
+                        )
+                    }
+
+                    is ScanMarketEvent -> {
+                        marketTrackerRepository.scanMarket(
                             stateEvent = stateEvent
                         )
                     }
@@ -83,15 +101,22 @@ class MarketTrackerViewModel @ViewModelInject constructor(
         setViewState(update)
     }
 
-    private fun setMarketOrderListData(marketOrderList: List<MarketResponse>) {
+    private fun setMarketProfitData(profits: List<Profit>) {
+        val update = getCurrentViewStateOrNew()
+        update.marketTrackerFields.profits = profits
+        setViewState(update)
+    }
+
+    private fun setOrderListData(marketOrderList: List<MarketResponse>) {
         val update = getCurrentViewStateOrNew()
         update.marketPriceFields.marketOrderList = marketOrderList
         setViewState(update)
     }
 
-    private fun getResource(): Resource {
-        return getCurrentViewStateOrNew().marketPriceFields.resource
-            ?: Resource(0, "", "", 0F, retailable = false, research = false)
+    private fun setResourceProfitData(profits: List<Profit>) {
+        val update = getCurrentViewStateOrNew()
+        update.marketPriceFields.profits = profits
+        setViewState(update)
     }
 
     fun setResource(resource: Resource) {
@@ -100,17 +125,27 @@ class MarketTrackerViewModel @ViewModelInject constructor(
         setViewState(update)
     }
 
-    private fun setMarketProfitsData(profits: List<Profit>) {
+    private fun getResource(): Resource {
+        return getCurrentViewStateOrNew().marketPriceFields.resource
+            ?: Resource.dummyResource()
+    }
+
+    fun getProfitFilter() : String {
+        return preferences.getProfitFilter()
+    }
+
+    fun setProfitFilter(filter: String) {
         val update = getCurrentViewStateOrNew()
-        update.marketPriceFields.profits = profits
+        update.marketTrackerFields.filter = filter
+        update.marketPriceFields.filter = filter
         setViewState(update)
+        preferences.setProfitFilter(filter)
     }
 
     fun clearMarketPriceFragment() {
         val update = getCurrentViewStateOrNew()
         update.marketPriceFields.marketOrderList = null
         update.marketPriceFields.profits = null
-        update.marketPriceFields.resourceId = null
         update.marketPriceFields.resource = null
         setViewState(update)
     }

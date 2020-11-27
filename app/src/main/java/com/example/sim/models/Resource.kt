@@ -31,4 +31,17 @@ class Resource(
     override fun equals(other: Any?): Boolean {
         return super.equals(other)
     }
+
+    companion object{
+        fun dummyResource(): Resource {
+            return Resource(
+                db_letter = 0,
+                name = "",
+                image = "",
+                transportation = 0F,
+                retailable = false,
+                research = false
+            )
+        }
+    }
 }

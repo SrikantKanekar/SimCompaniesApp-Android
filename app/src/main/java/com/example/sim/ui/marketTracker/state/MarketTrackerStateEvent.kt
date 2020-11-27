@@ -22,4 +22,14 @@ sealed class MarketTrackerStateEvent : StateEvent {
             return "GetMarketDataByIdEvent"
         }
     }
+
+    object ScanMarketEvent : MarketTrackerStateEvent() {
+        override fun errorInfo(): String {
+            return "Failed To Get Market Data"
+        }
+
+        override fun toString(): String {
+            return "ScanMarketEvent"
+        }
+    }
 }
