@@ -10,14 +10,14 @@ import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.onNavDestinationSelected
-import androidx.preference.PreferenceManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
 import com.afollestad.materialdialogs.customview.getCustomView
 import com.example.sim.R
-import com.example.sim.api.market.response.MarketResponse
 import com.example.sim.models.Profit
+import com.example.sim.ui.marketTracker.adapters.MarketOrderAdapter
+import com.example.sim.ui.marketTracker.adapters.MarketProfitAdapter
 import com.example.sim.ui.marketTracker.state.MarketTrackerStateEvent.GetMarketDataByIdEvent
 import com.example.sim.util.Constants
 import com.example.sim.util.StateMessageCallback
@@ -111,7 +111,7 @@ class MarketPriceFragment : BaseMarketTrackerFragment(R.layout.fragment_market_p
         val currentProfit = profits[position]
         val currentQuality = currentProfit.buyAt.combinedOrders[0].quality
 
-        val profitAdapter = ProfitAdapter()
+        val profitAdapter = MarketProfitAdapter()
         customView.recycler_view_profit_order.setHasFixedSize(true)
         customView.recycler_view_profit_order.adapter = profitAdapter
 

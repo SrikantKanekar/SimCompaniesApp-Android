@@ -73,12 +73,15 @@ class MarketTracker constructor(
 
                 quality < orders[i].quality -> {
                     val decrementedPrice = getDecrementedPrice(orders[i].price)
-                    val dummyOrder = MarketResponse.dummyMarketResponse(decrementedPrice)
-                    currentList.add(dummyOrder)
-                    Log.d(
-                        TAG,
-                        "getTwoDimensionalArray: Added dummy order to currentList ${dummyOrder.price}"
-                    )
+
+                    if (orders[i-1].price < decrementedPrice){
+                        val dummyOrder = MarketResponse.dummyMarketResponse(decrementedPrice)
+                        currentList.add(dummyOrder)
+                        Log.d(
+                            TAG,
+                            "getTwoDimensionalArray: Added dummy order to currentList ${dummyOrder.price}"
+                        )
+                    }
 
                     twoDimensionalArray.add(currentList)
 
@@ -154,7 +157,7 @@ class MarketTracker constructor(
 
         var sellAt = currentOrder.price
         if (currentOrder.kind != 1000) {
-            sellAt -= getDecrementedPrice(currentOrder.price)
+            sellAt = getDecrementedPrice(currentOrder.price)
         }
 
         val profitValue =

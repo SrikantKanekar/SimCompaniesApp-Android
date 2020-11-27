@@ -1,4 +1,4 @@
-package com.example.sim.ui.marketTracker
+package com.example.sim.ui.marketTracker.adapters
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
@@ -10,11 +10,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.sim.R
 import com.example.sim.models.Resource
-import kotlinx.android.synthetic.main.item_market_tracker_resource.view.*
 import kotlinx.android.synthetic.main.item_market_tracker_resource.view.image_view
-import kotlinx.android.synthetic.main.item_order.view.*
 
-class MarketTrackerResourceAdapter(private val interaction: Interaction? = null) :
+class MarketResourceAdapter(private val interaction: Interaction? = null) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Resource>() {

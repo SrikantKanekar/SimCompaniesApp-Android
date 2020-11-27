@@ -18,6 +18,8 @@ import com.afollestad.materialdialogs.customview.getCustomView
 import com.example.sim.R
 import com.example.sim.models.Profit
 import com.example.sim.models.Resource
+import com.example.sim.ui.marketTracker.adapters.MarketResourceAdapter
+import com.example.sim.ui.marketTracker.adapters.MarketProfitAdapter
 import com.example.sim.ui.marketTracker.state.MarketTrackerStateEvent.GetAllResourcesEvent
 import com.example.sim.ui.marketTracker.state.MarketTrackerStateEvent.ScanMarketEvent
 import com.example.sim.util.Constants.Companion.SORT_COST
@@ -33,11 +35,11 @@ import java.text.DecimalFormat
 
 @AndroidEntryPoint
 class MarketTrackerFragment : BaseMarketTrackerFragment(R.layout.fragment_market_tracker),
-    MarketTrackerResourceAdapter.Interaction,
+    MarketResourceAdapter.Interaction,
     SwipeRefreshLayout.OnRefreshListener,
     ViewListener {
 
-    lateinit var adapter: MarketTrackerResourceAdapter
+    lateinit var adapter: MarketResourceAdapter
     lateinit var profits: List<Profit>
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -90,7 +92,7 @@ class MarketTrackerFragment : BaseMarketTrackerFragment(R.layout.fragment_market
     }
 
     private fun initRecyclerView() {
-        adapter = MarketTrackerResourceAdapter(this)
+        adapter = MarketResourceAdapter(this)
         recycler_view.setHasFixedSize(true)
         recycler_view.layoutManager = GridLayoutManager(context, 3)
         recycler_view.adapter = adapter
@@ -159,7 +161,7 @@ class MarketTrackerFragment : BaseMarketTrackerFragment(R.layout.fragment_market
         val currentResource = currentProfit.resource
         val currentQuality = currentProfit.buyAt.combinedOrders[0].quality
 
-        val profitAdapter = ProfitAdapter()
+        val profitAdapter = MarketProfitAdapter()
         customView.recycler_view_profit_order.setHasFixedSize(true)
         customView.recycler_view_profit_order.adapter = profitAdapter
 

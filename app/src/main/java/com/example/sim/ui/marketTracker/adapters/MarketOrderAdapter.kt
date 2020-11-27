@@ -1,4 +1,4 @@
-package com.example.sim.ui.marketTracker
+package com.example.sim.ui.marketTracker.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -34,7 +34,6 @@ class MarketOrderAdapter(private val interaction: Interaction? = null) :
 
     }
     private val differ = AsyncListDiffer(this, DIFF_CALLBACK)
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 

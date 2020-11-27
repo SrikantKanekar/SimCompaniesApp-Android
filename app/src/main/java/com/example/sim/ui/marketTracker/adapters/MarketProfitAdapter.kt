@@ -1,4 +1,4 @@
-package com.example.sim.ui.marketTracker
+package com.example.sim.ui.marketTracker.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +13,7 @@ import com.example.sim.api.market.response.MarketResponse
 import kotlinx.android.synthetic.main.item_profit_order.view.*
 import java.text.DecimalFormat
 
-class ProfitAdapter(private val interaction: Interaction? = null) :
+class MarketProfitAdapter(private val interaction: Interaction? = null) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<MarketResponse>() {
@@ -34,7 +34,6 @@ class ProfitAdapter(private val interaction: Interaction? = null) :
 
     }
     private val differ = AsyncListDiffer(this, DIFF_CALLBACK)
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
