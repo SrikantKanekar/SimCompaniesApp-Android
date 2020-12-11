@@ -56,6 +56,10 @@ class MarketTracker constructor(
             when {
 
                 i == 0 -> {
+                    if(quality > maxQuality) {
+                        Log.d(TAG, "getTwoDimensionalArray: ----------Breaking------------------")
+                        break
+                    }
                     currentList.add(orders[i])
                     Log.d(
                         TAG,

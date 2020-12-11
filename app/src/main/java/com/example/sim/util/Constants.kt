@@ -16,5 +16,9 @@ class Constants {
         const val SORT_COST = "SORT_COST"
         const val SORT_QUALITY = "SORT_QUALITY"
         const val SORT_ORDERS = "SORT_ORDERS"
+
+        const val PROFIT_TYPE = 2000
+        const val BUTTON_SCAN_TYPE = 2001
+        const val NOT_FOUND_TYPE = 2002
     }
 }

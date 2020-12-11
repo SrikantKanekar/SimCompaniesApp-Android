@@ -82,8 +82,6 @@ dependencies {
     //Swipe Refresh Layout
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
-    implementation "com.synnapps:carouselview:0.1.5"
-
     implementation "androidx.preference:preference-ktx:1.1.1"
 
     //Leak Canary

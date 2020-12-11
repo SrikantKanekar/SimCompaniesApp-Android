@@ -11,7 +11,11 @@
         tools:layout="@layout/fragment_resources">
         <action
             android:id="@+id/action_resourceFragment2_to_viewResourceFragment"
-            app:destination="@id/viewResourceFragment" />
+            app:destination="@id/viewResourceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/viewResourceFragment"
@@ -25,7 +29,11 @@
         tools:layout="@layout/fragment_building">
         <action
             android:id="@+id/action_buildingFragment_to_viewBuildingFragment"
-            app:destination="@id/viewBuildingFragment" />
+            app:destination="@id/viewBuildingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/viewBuildingFragment"
@@ -48,7 +56,7 @@
         android:id="@+id/viewPriceTrackerFragment"
         android:name="com.example.sim.ui.priceTracker.ViewPriceTrackerFragment"
         android:label="fragment_view_price_tracker"
-        tools:layout="@layout/fragment_view_price_tracker" >
+        tools:layout="@layout/fragment_view_price_tracker">
         <action
             android:id="@+id/action_viewPriceTrackerFragment_to_editPriceTrackerFragment"
             app:destination="@id/editPriceTrackerFragment" />
@@ -69,26 +77,22 @@
         android:label="Market Tracker"
         tools:layout="@layout/fragment_market_tracker">
         <action
-            android:id="@+id/action_marketTrackerFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
-        <action
             android:id="@+id/action_marketTrackerFragment_to_marketPriceFragment"
-            app:destination="@id/marketPriceFragment" />
+            app:destination="@id/marketPriceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/marketPriceFragment"
         android:name="com.example.sim.ui.marketTracker.MarketPriceFragment"
         android:label="{resource_name}"
-        tools:layout="@layout/fragment_market_price" >
+        tools:layout="@layout/fragment_market_price">
         <argument
             android:name="resource_name"
             app:argType="string" />
     </fragment>
-    <fragment
-        android:id="@+id/resultFragment"
-        android:name="com.example.sim.ui.marketTracker.ResultFragment"
-        android:label="Result"
-        tools:layout="@layout/fragment_result" />
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.sim.ui.settings.SettingsFragment"

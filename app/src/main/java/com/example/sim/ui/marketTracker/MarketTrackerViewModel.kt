@@ -127,7 +127,7 @@ class MarketTrackerViewModel @ViewModelInject constructor(
 
     private fun getResource(): Resource {
         return getCurrentViewStateOrNew().marketPriceFields.resource
-            ?: Resource.dummyResource()
+            ?: Resource.dummyNotFoundResource()
     }
 
     fun getProfitFilter() : String {

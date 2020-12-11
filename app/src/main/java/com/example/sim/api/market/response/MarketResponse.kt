@@ -29,5 +29,21 @@ data class MarketResponse(
                 0F
             )
         }
+
+        fun dummyMarketResponseList(decrementedPrice: Float): List<MarketResponse> {
+            val response = MarketResponse(
+                0,
+                1000,
+                0,
+                0,
+                decrementedPrice,
+                MarketResponse.Seller(0, "", ""),
+                "",
+                0F
+            )
+            val list = ArrayList<MarketResponse>()
+            list.add(response)
+            return list
+        }
     }
 }

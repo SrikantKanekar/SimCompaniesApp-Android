@@ -33,9 +33,20 @@ class Resource(
     }
 
     companion object{
-        fun dummyResource(): Resource {
+        fun dummyNotFoundResource(): Resource {
             return Resource(
-                db_letter = 0,
+                db_letter = Constants.NOT_FOUND_TYPE,
+                name = "",
+                image = "",
+                transportation = 0F,
+                retailable = false,
+                research = false
+            )
+        }
+
+        fun dummyScanResource(): Resource {
+            return Resource(
+                db_letter = Constants.BUTTON_SCAN_TYPE,
                 name = "",
                 image = "",
                 transportation = 0F,

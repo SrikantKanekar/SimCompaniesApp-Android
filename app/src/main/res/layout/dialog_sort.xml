@@ -3,59 +3,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="32dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sort"
-        android:textSize="22sp" />
+        android:textAppearance="?attr/textAppearanceHeadline5" />
 
     <RadioGroup
         android:id="@+id/sort_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:orientation="vertical">
 
         <RadioButton
             android:id="@+id/sort_profit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:text="Profit"
-            android:textSize="16sp" />
+            android:textAppearance="?attr/textAppearanceBody1" />
 
         <RadioButton
             android:id="@+id/sort_cost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:text="Cost"
-            android:textSize="16sp" />
+            android:textAppearance="?attr/textAppearanceBody1" />
 
         <RadioButton
             android:id="@+id/sort_quality"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:text="Quality"
-            android:textSize="16sp" />
+            android:textAppearance="?attr/textAppearanceBody1" />
 
         <RadioButton
             android:id="@+id/sort_orders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:text="Orders"
-            android:textSize="16sp" />
-
+            android:textAppearance="?attr/textAppearanceBody1" />
     </RadioGroup>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="8dp"
         android:gravity="end"
         android:orientation="horizontal">
 
@@ -63,16 +58,18 @@
             android:id="@+id/negative_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="28dp"
             android:text="Cancel"
-            android:textSize="16sp" />
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="@color/teal_200" />
 
         <TextView
             android:id="@+id/positive_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Apply"
-            android:textSize="16sp" />
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="@color/teal_200" />
 
     </LinearLayout>
 </LinearLayout>

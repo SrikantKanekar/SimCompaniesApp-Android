@@ -10,30 +10,28 @@ import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.onNavDestinationSelected
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
 import com.afollestad.materialdialogs.customview.getCustomView
 import com.example.sim.R
-import com.example.sim.models.Profit
 import com.example.sim.ui.marketTracker.adapters.MarketOrderAdapter
 import com.example.sim.ui.marketTracker.adapters.MarketProfitAdapter
 import com.example.sim.ui.marketTracker.state.MarketTrackerStateEvent.GetMarketDataByIdEvent
 import com.example.sim.util.Constants
 import com.example.sim.util.StateMessageCallback
-import com.synnapps.carouselview.ViewListener
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_market_price.*
-import kotlinx.android.synthetic.main.item_profit.view.*
-import java.text.DecimalFormat
+import kotlinx.android.synthetic.main.fragment_market_price.recycler_view_profit
+import kotlinx.android.synthetic.main.fragment_market_price.swipe_refresh
 
 @AndroidEntryPoint
 class MarketPriceFragment : BaseMarketTrackerFragment(R.layout.fragment_market_price),
-    SwipeRefreshLayout.OnRefreshListener,
-    ViewListener {
+    SwipeRefreshLayout.OnRefreshListener {
 
     lateinit var orderAdapter: MarketOrderAdapter
-    lateinit var profits: List<Profit>
+    lateinit var profitAdapter: MarketProfitAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -41,14 +39,29 @@ class MarketPriceFragment : BaseMarketTrackerFragment(R.layout.fragment_market_p
         subscribeObservers()
         swipe_refresh.setOnRefreshListener(this)
         setHasOptionsMenu(true)
+    }
 
-        viewModel.setStateEvent(GetMarketDataByIdEvent)
+    override fun onResume() {
+        super.onResume()
+        getMarketDataById()
+        swipe_refresh.isEnabled = true
     }
 
     private fun initRecyclerView() {
         orderAdapter = MarketOrderAdapter()
         recycler_view_orders.setHasFixedSize(true)
         recycler_view_orders.adapter = orderAdapter
+
+        profitAdapter = MarketProfitAdapter()
+        recycler_view_profit.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        recycler_view_profit.adapter = profitAdapter
+    }
+
+    private fun getMarketDataById() {
+        if (viewModel.viewState.value?.marketPriceFields?.marketOrderList == null) {
+            viewModel.setStateEvent(GetMarketDataByIdEvent)
+        }
     }
 
     private fun subscribeObservers() {
@@ -59,9 +72,16 @@ class MarketPriceFragment : BaseMarketTrackerFragment(R.layout.fragment_market_p
                     orderAdapter.submitList(marketOrderList)
                 }
 
-                viewState.marketPriceFields.profits?.let { currentProfits ->
-                    profits = currentProfits
-                    setCurrentProfits()
+                viewState.marketPriceFields.profits?.let { profits ->
+                    if (profits.isEmpty()) {
+                        profitAdapter.showProfitNotFound()
+                    } else {
+                        profitAdapter.submitList(profits)
+                    }
+                }
+
+                viewState.marketPriceFields.filter?.let { filter ->
+                    setProfitsFilter(filter)
                 }
                 swipe_refresh.isRefreshing = false
             }
@@ -88,52 +108,13 @@ class MarketPriceFragment : BaseMarketTrackerFragment(R.layout.fragment_market_p
         })
     }
 
-    private fun setCurrentProfits() {
-        carousel_view.setViewListener(this)
-        if (profits.isEmpty()) {
-            carousel_view.pageCount = 1
-        } else {
-            carousel_view.pageCount = profits.size
-        }
-    }
+    private fun setProfitsFilter(filter: String) {
 
-    override fun setViewForPosition(position: Int): View {
-        val customView = layoutInflater.inflate(R.layout.item_profit, null)
-
-        if (profits.isEmpty()) {
-            customView.text_view_buy.text = "SORRY... NO PROFITS CAN BE GAINED"
-            customView.recycler_view_profit_order.visibility = View.GONE
-            customView.chip_group.visibility = View.GONE
-            customView.rating_bar.visibility = View.GONE
-            return customView
-        }
-
-        val currentProfit = profits[position]
-        val currentQuality = currentProfit.buyAt.combinedOrders[0].quality
-
-        val profitAdapter = MarketProfitAdapter()
-        customView.recycler_view_profit_order.setHasFixedSize(true)
-        customView.recycler_view_profit_order.adapter = profitAdapter
-
-        if (currentQuality == 0) {
-            customView.rating_bar.visibility = View.GONE
-        } else {
-            customView.rating_bar.numStars = currentQuality
-            customView.rating_bar.rating = currentQuality.toFloat()
-        }
-
-        customView.text_view_buy.text = "BUY ${currentProfit.buyAt.combinedOrders.size} ORDERS"
-        profitAdapter.submitList(currentProfit.buyAt.combinedOrders)
-        customView.chip_cost.text = "Cost ${currentProfit.totalCost.toInt()}"
-        customView.chip_profit.text = "Profit ${currentProfit.totalProfit.toInt()}"
-
-        val decimalFormat = DecimalFormat("0.###").format(currentProfit.sellAt)
-        customView.chip_sell_at.text = "Sell $decimalFormat"
-        return customView
     }
 
     override fun onRefresh() {
         viewModel.setStateEvent(GetMarketDataByIdEvent)
+        profitAdapter.clearList()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -148,13 +129,15 @@ class MarketPriceFragment : BaseMarketTrackerFragment(R.layout.fragment_market_p
                 true
             }
             else -> {
-                item.onNavDestinationSelected(findNavController()) || super.onOptionsItemSelected(item)
+                item.onNavDestinationSelected(findNavController()) || super.onOptionsItemSelected(
+                    item
+                )
             }
         }
     }
 
     private fun showSortDialog() {
-        activity?.let {activity->
+        activity?.let { activity ->
             val dialog = MaterialDialog(activity)
                 .noAutoDismiss()
                 .customView(R.layout.dialog_sort)
@@ -190,6 +173,11 @@ class MarketPriceFragment : BaseMarketTrackerFragment(R.layout.fragment_market_p
             }
             dialog.show()
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        swipe_refresh.isEnabled = false
     }
 
     override fun onDestroy() {

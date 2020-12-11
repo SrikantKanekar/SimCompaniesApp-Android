@@ -20,40 +20,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <Button
-                    android:id="@+id/button_scan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginBottom="50dp"
-                    android:text="Scan Market" />
-
-                <com.synnapps.carouselview.CarouselView
-                    android:id="@+id/carousel_view"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_profit"
                     android:layout_width="match_parent"
-                    android:layout_height="265dp"
-                    android:layout_marginBottom="20dp"
-                    android:visibility="gone"
-                    app:disableAutoPlayOnUserInteraction="true"
-                    app:fillColor="@color/white"
-                    app:indicatorMarginVertical="10dp"
-                    app:pageColor="@color/black"
-                    app:radius="3dp"
-                    app:slideInterval="3000"
-                    app:strokeColor="@color/black"
-                    app:strokeWidth="1dp" />
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    tools:listitem="@layout/item_profit" />
 
                 <ProgressBar
                     android:id="@+id/progress_bar_inside"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="60dp"
                     android:layout_centerInParent="true"
                     android:visibility="gone" />
             </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view"
+                android:id="@+id/recycler_view_resource"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_below="@id/relative_layout"
@@ -61,6 +46,5 @@
                 android:overScrollMode="never"
                 tools:listitem="@layout/item_market_tracker_resource" />
         </RelativeLayout>
-
     </androidx.core.widget.NestedScrollView>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
