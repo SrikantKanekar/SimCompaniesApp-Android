@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface BuildingApiService {
 
-    @GET("v2/buildings/1")
+    @GET("v3/0/buildings/0")
     suspend fun getAllBuildings(): List<BuildingResponse>
 }

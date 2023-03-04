@@ -6,7 +6,7 @@ import retrofit2.http.Path
 
 interface MarketApiService {
 
-    @GET("v2/market/{id}")
+    @GET("v3/market/0/{id}")
     suspend fun getMarketDataById(
         @Path("id") id: Int
     ): List<MarketResponse>
