@@ -1,6 +1,8 @@
 # SimCompanies App
 
-An android application for tracking Sim Companies market
+A android app for tracking Sim Companies market 
+
+Game - https://www.simcompanies.com/
 
 ## Screenshots
 
