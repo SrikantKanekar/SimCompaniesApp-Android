@@ -1,6 +1,6 @@
 # SimCompanies App
 
-A android app for tracking Sim Companies market 
+A Android app that allows users to track sim companies game market by fetching data from https://www.simcompanies.com/ API. The app notifies users about any advice to buy or sell and has a settings screen to configure market scanning parameters.
 
 Game - https://www.simcompanies.com/
 
